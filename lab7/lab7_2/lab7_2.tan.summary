@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.600 ns
+From           : reset
+To             : greenredman:comb_52|idx_gen:M3|delay[2]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 39.700 ns
+From           : traffic:comb_51|ryg_ctl:comb_4|light_mode[1]
+To             : seg7[0]
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.200 ns
+From           : day_night
+To             : traffic:comb_51|ryg_ctl:comb_4|light_led[3]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 61.73 MHz ( period = 16.200 ns )
+From           : traffic:comb_51|light_cnt_dn_29:comb_5|cnt[4]
+To             : traffic:comb_51|ryg_ctl:comb_4|mode[2]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

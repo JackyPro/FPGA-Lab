@@ -1,0 +1,7 @@
+
+State Machine - |lab7_2self|control:u4|traffic_state
+Name traffic_state.NIGHT traffic_state.RED_LIGHT traffic_state.YELLOW_LIGHT traffic_state.GREEN_LIGHT 
+traffic_state.GREEN_LIGHT 0 0 0 0 
+traffic_state.YELLOW_LIGHT 0 0 1 1 
+traffic_state.RED_LIGHT 0 1 0 1 
+traffic_state.NIGHT 1 0 0 1 

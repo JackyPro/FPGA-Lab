@@ -1,0 +1,230 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/altera/90sp2/quartus/lab7/lab7_2
+vbcd_to_seg7_1
+Z1 !s110 1597075387
+!i10b 1
+!s100 J5Lh1d@I^PVj`[eAEm^eI2
+I7m^LTPJ=WDlH9EA08W^lA0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1597075382
+Z4 8C:/altera/90sp2/quartus/lab7/lab7_2/lab7_2.v
+Z5 FC:/altera/90sp2/quartus/lab7/lab7_2/lab7_2.v
+L0 187
+Z6 OL;L;10.4;61
+r1
+!s85 0
+31
+Z7 !s108 1597075387.514000
+Z8 !s107 C:/altera/90sp2/quartus/lab7/lab7_2/lab7_2.v|
+Z9 !s90 -reportprogress|30|-work|work|C:/altera/90sp2/quartus/lab7/lab7_2/lab7_2.v|
+!i113 0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vfreq_div
+R1
+!i10b 1
+!s100 n9Q`MbEnlL_:BfllXPcd<3
+IM:N@g_;bGgP9a`c3L3QKO1
+R2
+R0
+R3
+R4
+R5
+L0 167
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+vgreenredman
+R1
+!i10b 1
+!s100 H3o]]?D6AVGXX8kM2akAP3
+IhIQz?>P8fA?]h?F>EVkYW1
+R2
+R0
+R3
+R4
+R5
+L0 228
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+vidx_gen
+R1
+!i10b 1
+!s100 Q7o3<fS[B2WGl>G2>I0f33
+ISDG:M5gDo1dE5m9Jnz5UW2
+R2
+R0
+R3
+R4
+R5
+L0 311
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+vlab7_2
+R1
+!i10b 1
+!s100 =lQWN7z=?482kTcFVZ_Hj2
+IS8zL=9VnM=;bF`<ff:ki<2
+R2
+R0
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+vlight_cnt_dn_29
+R1
+!i10b 1
+!s100 gY:abQ`V<OC9Z;zKiQ7o]3
+IhBG3MgYfI3L09>@mmo?YX2
+R2
+R0
+R3
+R4
+R5
+L0 44
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+vrom_char1
+R1
+!i10b 1
+!s100 o3SY=4?eH8eBiUAV<W_b[2
+IoSFb80=`a^f8GnX;>`>FU2
+R2
+R0
+R3
+R4
+R5
+L0 250
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+vrow_gen
+R1
+!i10b 1
+!s100 ==?1>VSflSO^NdO205]>52
+Ik0>NP?]NnV@7Oo1=Qlad]1
+R2
+R0
+R3
+R4
+R5
+L0 365
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+vryg_ctl
+R1
+!i10b 1
+!s100 U@KW=ik>HNgOI9514dm003
+Iafa8Ef4NR]hc56<CO:`oh2
+R2
+R0
+R3
+R4
+R5
+L0 67
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+vseg7_select
+R1
+!i10b 1
+!s100 6Pe<_UQilQ_go>XDOQfJf3
+I2[@2I;AFL3e6EGhZ3c?OQ3
+R2
+R0
+R3
+R4
+R5
+L0 209
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+vtraffic
+R1
+!i10b 1
+!s100 aHkcKG;9g=D>>K6GDXl3m2
+I9T0JZ6z9^SdQUG:DHmPmB2
+R2
+R0
+R3
+R4
+R5
+L0 29
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10

@@ -1,0 +1,10 @@
+Fitter Status : Successful - Fri Aug 07 18:19:57 2020
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : lab7_1
+Top-level Entity Name : lab7_1
+Family : FLEX10KA
+Device : EPF10K30ATC144-3
+Timing Models : Final
+Total logic elements : 115 / 1,728 ( 7 % )
+Total pins : 20 / 102 ( 20 % )
+Total memory bits : 0 / 12,288 ( 0 % )

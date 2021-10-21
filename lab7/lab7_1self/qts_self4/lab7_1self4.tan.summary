@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.900 ns
+From           : nightcomes
+To             : control:u3|traffic_state.RED_LIGHT
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 33.700 ns
+From           : control:u3|timer3reg[0]
+To             : seg7[6]
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -1.200 ns
+From           : nightcomes
+To             : control:u3|traffic_state.NIGHT
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 70.92 MHz ( period = 14.100 ns )
+From           : freq_div:u1|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]
+To             : freq_div:u1|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[22]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
