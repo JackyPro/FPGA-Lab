@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.600 ns
+From           : enable
+To             : count_0_9:comb_4|count_out[3]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 25.600 ns
+From           : count_0_9:comb_4|count_out[3]
+To             : carry1
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.600 ns
+From           : enable
+To             : count_0_9:comb_4|count_out[0]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 68.97 MHz ( period = 14.500 ns )
+From           : freq_div:M1|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]
+To             : freq_div:M1|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[23]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

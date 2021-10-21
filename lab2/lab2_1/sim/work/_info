@@ -1,0 +1,78 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/altera/90sp2/quartus/lab2/lab2_1/sim
+T_opt
+!s110 1592465172
+Vf9gTn8OzZWiCD0H;LP`cM1
+04 9 4 work testbench fast 0
+=5-945330812e9f-5eeb1713-183-11914
+o-quiet -auto_acc_if_foreign -work work -debugdb
+n@_opt
+OL;O;10.4;61
+vbcd_to_seg7
+Z1 !s110 1592465170
+!i10b 1
+!s100 G5gV3OzmVz`HbgzL4JVok2
+I0[7KX8SiW5YAnz^k]dIQC0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1592465161
+Z4 8bcd_to_seg7.v
+Z5 Fbcd_to_seg7.v
+L0 1
+Z6 OL;L;10.4;61
+r1
+!s85 0
+31
+Z7 !s108 1592465170.704000
+Z8 !s107 bcd_to_seg7.v|
+Z9 !s90 -reportprogress|300|bcd_to_seg7.v|
+!i113 0
+Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vbcd_to_seg7_1
+R1
+!i10b 1
+!s100 C>ZXe0Q;aUSFAe>b?30Je1
+INN[4WSNQIWd;9AZ8EM@?>1
+R2
+R0
+R3
+R4
+R5
+L0 11
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+vtestbench
+!s110 1592465171
+!i10b 1
+!s100 4RoIj:na2OclTMCY`Oked0
+IDg12P9`beGZY2M5:9D`Z]1
+R2
+R0
+w1592464695
+8lab2_1_tb.v
+Flab2_1_tb.v
+L0 3
+R6
+r1
+!s85 0
+31
+!s108 1592465171.020000
+!s107 lab2_1_tb.v|
+!s90 -reportprogress|300|lab2_1_tb.v|
+!i113 0
+R10

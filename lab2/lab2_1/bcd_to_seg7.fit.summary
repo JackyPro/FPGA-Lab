@@ -1,0 +1,10 @@
+Fitter Status : Successful - Thu Jun 18 09:43:19 2020
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : bcd_to_seg7
+Top-level Entity Name : bcd_to_seg7
+Family : FLEX10KA
+Device : EPF10K30ATC144-3
+Timing Models : Final
+Total logic elements : 7 / 1,728 ( < 1 % )
+Total pins : 15 / 102 ( 15 % )
+Total memory bits : 0 / 12,288 ( 0 % )

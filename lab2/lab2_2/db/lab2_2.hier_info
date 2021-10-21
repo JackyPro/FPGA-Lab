@@ -1,0 +1,105 @@
+|lab2_2
+clk => clk~0.IN1
+reset => reset~0.IN2
+enable => enable~0.IN1
+seg7_sel[0] <= <VCC>
+seg7_sel[1] <= <GND>
+seg7_sel[2] <= <VCC>
+seg7_out[0] <= bcd_to_seg7_1:comb_5.port1
+seg7_out[1] <= bcd_to_seg7_1:comb_5.port1
+seg7_out[2] <= bcd_to_seg7_1:comb_5.port1
+seg7_out[3] <= bcd_to_seg7_1:comb_5.port1
+seg7_out[4] <= bcd_to_seg7_1:comb_5.port1
+seg7_out[5] <= bcd_to_seg7_1:comb_5.port1
+seg7_out[6] <= bcd_to_seg7_1:comb_5.port1
+dpt_out <= <GND>
+carry1 <= count_0_9:comb_4.port3
+led_com <= <VCC>
+
+
+|lab2_2|freq_div:M1
+clk_in => divider[23].CLK
+clk_in => divider[22].CLK
+clk_in => divider[21].CLK
+clk_in => divider[20].CLK
+clk_in => divider[19].CLK
+clk_in => divider[18].CLK
+clk_in => divider[17].CLK
+clk_in => divider[16].CLK
+clk_in => divider[15].CLK
+clk_in => divider[14].CLK
+clk_in => divider[13].CLK
+clk_in => divider[12].CLK
+clk_in => divider[11].CLK
+clk_in => divider[10].CLK
+clk_in => divider[9].CLK
+clk_in => divider[8].CLK
+clk_in => divider[7].CLK
+clk_in => divider[6].CLK
+clk_in => divider[5].CLK
+clk_in => divider[4].CLK
+clk_in => divider[3].CLK
+clk_in => divider[2].CLK
+clk_in => divider[1].CLK
+clk_in => divider[0].CLK
+reset => divider[23].ACLR
+reset => divider[22].ACLR
+reset => divider[21].ACLR
+reset => divider[20].ACLR
+reset => divider[19].ACLR
+reset => divider[18].ACLR
+reset => divider[17].ACLR
+reset => divider[16].ACLR
+reset => divider[15].ACLR
+reset => divider[14].ACLR
+reset => divider[13].ACLR
+reset => divider[12].ACLR
+reset => divider[11].ACLR
+reset => divider[10].ACLR
+reset => divider[9].ACLR
+reset => divider[8].ACLR
+reset => divider[7].ACLR
+reset => divider[6].ACLR
+reset => divider[5].ACLR
+reset => divider[4].ACLR
+reset => divider[3].ACLR
+reset => divider[2].ACLR
+reset => divider[1].ACLR
+reset => divider[0].ACLR
+clk_out <= divider[23].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2_2|count_0_9:comb_4
+clk => count_out[3]~reg0.CLK
+clk => count_out[2]~reg0.CLK
+clk => count_out[1]~reg0.CLK
+clk => count_out[0]~reg0.CLK
+reset => count_out[3]~reg0.ACLR
+reset => count_out[2]~reg0.ACLR
+reset => count_out[1]~reg0.ACLR
+reset => count_out[0]~reg0.ACLR
+enable => count_out[0]~reg0.ENA
+enable => count_out[3]~reg0.ENA
+enable => count_out[2]~reg0.ENA
+enable => count_out[1]~reg0.ENA
+carry1 <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+count_out[0] <= count_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count_out[1] <= count_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count_out[2] <= count_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count_out[3] <= count_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2_2|bcd_to_seg7_1:comb_5
+bcd_in[0] => Decoder0.IN3
+bcd_in[1] => Decoder0.IN2
+bcd_in[2] => Decoder0.IN1
+bcd_in[3] => Decoder0.IN0
+seg7[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg7[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg7[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg7[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg7[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg7[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg7[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

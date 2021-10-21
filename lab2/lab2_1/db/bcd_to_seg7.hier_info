@@ -1,0 +1,32 @@
+|bcd_to_seg7
+bcd_in[0] => bcd_in[0]~3.IN1
+bcd_in[1] => bcd_in[1]~2.IN1
+bcd_in[2] => bcd_in[2]~1.IN1
+bcd_in[3] => bcd_in[3]~0.IN1
+seg7_sel[0] <= <VCC>
+seg7_sel[1] <= <GND>
+seg7_sel[2] <= <VCC>
+seg7_out[0] <= bcd_to_seg7_1:comb_4.port1
+seg7_out[1] <= bcd_to_seg7_1:comb_4.port1
+seg7_out[2] <= bcd_to_seg7_1:comb_4.port1
+seg7_out[3] <= bcd_to_seg7_1:comb_4.port1
+seg7_out[4] <= bcd_to_seg7_1:comb_4.port1
+seg7_out[5] <= bcd_to_seg7_1:comb_4.port1
+seg7_out[6] <= bcd_to_seg7_1:comb_4.port1
+dpt_out <= <GND>
+
+
+|bcd_to_seg7|bcd_to_seg7_1:comb_4
+bcd_in[0] => Decoder0.IN3
+bcd_in[1] => Decoder0.IN2
+bcd_in[2] => Decoder0.IN1
+bcd_in[3] => Decoder0.IN0
+seg7[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg7[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg7[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg7[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg7[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg7[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg7[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
