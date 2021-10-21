@@ -1,0 +1,285 @@
+|lab6
+clk => clk~0.IN1
+reset => reset~0.IN2
+column[0] => column[0]~2.IN1
+column[1] => column[1]~1.IN1
+column[2] => column[2]~0.IN1
+sel[0] <= key_seg7_6dig:comb_5.port3
+sel[1] <= key_seg7_6dig:comb_5.port3
+sel[2] <= key_seg7_6dig:comb_5.port3
+seg7[0] <= bcd_to_seg7:comb_6.port1
+seg7[1] <= bcd_to_seg7:comb_6.port1
+seg7[2] <= bcd_to_seg7:comb_6.port1
+seg7[3] <= bcd_to_seg7:comb_6.port1
+seg7[4] <= bcd_to_seg7:comb_6.port1
+seg7[5] <= bcd_to_seg7:comb_6.port1
+seg7[6] <= bcd_to_seg7:comb_6.port1
+
+
+|lab6|freq_div:comb_4
+clk_in => divider[12].CLK
+clk_in => divider[11].CLK
+clk_in => divider[10].CLK
+clk_in => divider[9].CLK
+clk_in => divider[8].CLK
+clk_in => divider[7].CLK
+clk_in => divider[6].CLK
+clk_in => divider[5].CLK
+clk_in => divider[4].CLK
+clk_in => divider[3].CLK
+clk_in => divider[2].CLK
+clk_in => divider[1].CLK
+clk_in => divider[0].CLK
+reset => divider[12].ACLR
+reset => divider[11].ACLR
+reset => divider[10].ACLR
+reset => divider[9].ACLR
+reset => divider[8].ACLR
+reset => divider[7].ACLR
+reset => divider[6].ACLR
+reset => divider[5].ACLR
+reset => divider[4].ACLR
+reset => divider[3].ACLR
+reset => divider[2].ACLR
+reset => divider[1].ACLR
+reset => divider[0].ACLR
+clk_out <= divider[12].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab6|key_seg7_6dig:comb_5
+clk_sel => clk_sel~0.IN3
+reset => reset~0.IN2
+column[0] => column[0]~2.IN1
+column[1] => column[1]~1.IN1
+column[2] => column[2]~0.IN1
+sel[0] <= sel[0]~2.DB_MAX_OUTPUT_PORT_TYPE
+sel[1] <= sel[1]~1.DB_MAX_OUTPUT_PORT_TYPE
+sel[2] <= sel[2]~0.DB_MAX_OUTPUT_PORT_TYPE
+key_code[0] <= key_code_mux:comb_8.port2
+key_code[1] <= key_code_mux:comb_8.port2
+key_code[2] <= key_code_mux:comb_8.port2
+key_code[3] <= key_code_mux:comb_8.port2
+
+
+|lab6|key_seg7_6dig:comb_5|count6:comb_4
+clk => out[2]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[0]~reg0.CLK
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab6|key_seg7_6dig:comb_5|key_decode:comb_5
+sel[0] => Mux4.IN10
+sel[0] => Mux3.IN10
+sel[0] => Mux2.IN10
+sel[0] => Mux1.IN10
+sel[0] => Mux0.IN10
+sel[1] => Mux4.IN9
+sel[1] => Mux3.IN9
+sel[1] => Mux2.IN9
+sel[1] => Mux1.IN9
+sel[1] => Mux0.IN9
+sel[2] => Mux4.IN8
+sel[2] => Mux3.IN8
+sel[2] => Mux2.IN8
+sel[2] => Mux1.IN8
+sel[2] => Mux0.IN8
+column[0] => Equal0.IN5
+column[0] => Decoder0.IN2
+column[1] => Equal0.IN4
+column[1] => Decoder0.IN1
+column[2] => Equal0.IN3
+column[2] => Decoder0.IN0
+press <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+scan_code[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+scan_code[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+scan_code[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+scan_code[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab6|key_seg7_6dig:comb_5|debounce_ctl:comb_6
+clk => gg[5].CLK
+clk => gg[4].CLK
+clk => gg[3].CLK
+clk => gg[2].CLK
+clk => gg[1].CLK
+clk => gg[0].CLK
+reset => gg[5].ACLR
+reset => gg[4].ACLR
+reset => gg[3].ACLR
+reset => gg[2].ACLR
+reset => gg[1].ACLR
+reset => gg[0].ACLR
+press => gg[0].DATAIN
+press => press_valid~0.IN1
+press_valid <= press_valid~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab6|key_seg7_6dig:comb_5|key_buf6:comb_7
+clk => display_code[23]~reg0.CLK
+clk => display_code[22]~reg0.CLK
+clk => display_code[21]~reg0.CLK
+clk => display_code[20]~reg0.CLK
+clk => display_code[19]~reg0.CLK
+clk => display_code[18]~reg0.CLK
+clk => display_code[17]~reg0.CLK
+clk => display_code[16]~reg0.CLK
+clk => display_code[15]~reg0.CLK
+clk => display_code[14]~reg0.CLK
+clk => display_code[13]~reg0.CLK
+clk => display_code[12]~reg0.CLK
+clk => display_code[11]~reg0.CLK
+clk => display_code[10]~reg0.CLK
+clk => display_code[9]~reg0.CLK
+clk => display_code[8]~reg0.CLK
+clk => display_code[7]~reg0.CLK
+clk => display_code[6]~reg0.CLK
+clk => display_code[5]~reg0.CLK
+clk => display_code[4]~reg0.CLK
+clk => display_code[3]~reg0.CLK
+clk => display_code[2]~reg0.CLK
+clk => display_code[1]~reg0.CLK
+clk => display_code[0]~reg0.CLK
+reset => display_code[23]~reg0.PRESET
+reset => display_code[22]~reg0.PRESET
+reset => display_code[21]~reg0.PRESET
+reset => display_code[20]~reg0.PRESET
+reset => display_code[19]~reg0.PRESET
+reset => display_code[18]~reg0.PRESET
+reset => display_code[17]~reg0.PRESET
+reset => display_code[16]~reg0.PRESET
+reset => display_code[15]~reg0.PRESET
+reset => display_code[14]~reg0.PRESET
+reset => display_code[13]~reg0.PRESET
+reset => display_code[12]~reg0.PRESET
+reset => display_code[11]~reg0.PRESET
+reset => display_code[10]~reg0.PRESET
+reset => display_code[9]~reg0.PRESET
+reset => display_code[8]~reg0.PRESET
+reset => display_code[7]~reg0.PRESET
+reset => display_code[6]~reg0.PRESET
+reset => display_code[5]~reg0.PRESET
+reset => display_code[4]~reg0.PRESET
+reset => display_code[3]~reg0.PRESET
+reset => display_code[2]~reg0.PRESET
+reset => display_code[1]~reg0.PRESET
+reset => display_code[0]~reg0.PRESET
+press_valid => display_code[0]~reg0.ENA
+press_valid => display_code[23]~reg0.ENA
+press_valid => display_code[22]~reg0.ENA
+press_valid => display_code[21]~reg0.ENA
+press_valid => display_code[20]~reg0.ENA
+press_valid => display_code[19]~reg0.ENA
+press_valid => display_code[18]~reg0.ENA
+press_valid => display_code[17]~reg0.ENA
+press_valid => display_code[16]~reg0.ENA
+press_valid => display_code[15]~reg0.ENA
+press_valid => display_code[14]~reg0.ENA
+press_valid => display_code[13]~reg0.ENA
+press_valid => display_code[12]~reg0.ENA
+press_valid => display_code[11]~reg0.ENA
+press_valid => display_code[10]~reg0.ENA
+press_valid => display_code[9]~reg0.ENA
+press_valid => display_code[8]~reg0.ENA
+press_valid => display_code[7]~reg0.ENA
+press_valid => display_code[6]~reg0.ENA
+press_valid => display_code[5]~reg0.ENA
+press_valid => display_code[4]~reg0.ENA
+press_valid => display_code[3]~reg0.ENA
+press_valid => display_code[2]~reg0.ENA
+press_valid => display_code[1]~reg0.ENA
+scan_code[0] => display_code[0]~reg0.DATAIN
+scan_code[1] => display_code[1]~reg0.DATAIN
+scan_code[2] => display_code[2]~reg0.DATAIN
+scan_code[3] => display_code[3]~reg0.DATAIN
+display_code[0] <= display_code[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[1] <= display_code[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[2] <= display_code[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[3] <= display_code[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[4] <= display_code[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[5] <= display_code[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[6] <= display_code[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[7] <= display_code[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[8] <= display_code[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[9] <= display_code[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[10] <= display_code[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[11] <= display_code[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[12] <= display_code[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[13] <= display_code[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[14] <= display_code[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[15] <= display_code[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[16] <= display_code[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[17] <= display_code[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[18] <= display_code[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[19] <= display_code[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[20] <= display_code[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[21] <= display_code[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[22] <= display_code[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_code[23] <= display_code[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab6|key_seg7_6dig:comb_5|key_code_mux:comb_8
+display_code[0] => key_code~23.DATAB
+display_code[1] => key_code~22.DATAB
+display_code[2] => key_code~21.DATAB
+display_code[3] => key_code~20.DATAB
+display_code[4] => key_code~19.DATAB
+display_code[5] => key_code~18.DATAB
+display_code[6] => key_code~17.DATAB
+display_code[7] => key_code~16.DATAB
+display_code[8] => key_code~15.DATAB
+display_code[9] => key_code~14.DATAB
+display_code[10] => key_code~13.DATAB
+display_code[11] => key_code~12.DATAB
+display_code[12] => key_code~11.DATAB
+display_code[13] => key_code~10.DATAB
+display_code[14] => key_code~9.DATAB
+display_code[15] => key_code~8.DATAB
+display_code[16] => key_code~7.DATAB
+display_code[17] => key_code~6.DATAB
+display_code[18] => key_code~5.DATAB
+display_code[19] => key_code~4.DATAB
+display_code[20] => key_code~3.DATAB
+display_code[21] => key_code~2.DATAB
+display_code[22] => key_code~1.DATAB
+display_code[23] => key_code~0.DATAB
+sel[0] => Equal0.IN0
+sel[0] => Equal1.IN1
+sel[0] => Equal2.IN0
+sel[0] => Equal3.IN1
+sel[0] => Equal4.IN0
+sel[0] => Equal5.IN0
+sel[1] => Equal0.IN2
+sel[1] => Equal1.IN2
+sel[1] => Equal2.IN1
+sel[1] => Equal3.IN0
+sel[1] => Equal4.IN1
+sel[1] => Equal5.IN1
+sel[2] => Equal0.IN1
+sel[2] => Equal1.IN0
+sel[2] => Equal2.IN2
+sel[2] => Equal3.IN2
+sel[2] => Equal4.IN2
+sel[2] => Equal5.IN2
+key_code[0] <= key_code~23.DB_MAX_OUTPUT_PORT_TYPE
+key_code[1] <= key_code~22.DB_MAX_OUTPUT_PORT_TYPE
+key_code[2] <= key_code~21.DB_MAX_OUTPUT_PORT_TYPE
+key_code[3] <= key_code~20.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab6|bcd_to_seg7:comb_6
+bcd_in[0] => Decoder0.IN3
+bcd_in[1] => Decoder0.IN2
+bcd_in[2] => Decoder0.IN1
+bcd_in[3] => Decoder0.IN0
+seg7[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg7[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg7[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg7[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg7[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg7[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg7[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
