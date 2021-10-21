@@ -1,0 +1,392 @@
+Classic Timing Analyzer report for lab5_1
+Thu Jul 02 10:49:55 2020
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                ;
++------------------------------+-------+---------------+----------------------------------+-------------------------------------------+-------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                      ; To                                        ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+-------------------------------------------+-------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 11.200 ns                        ; column[1]                                 ; key_led:comb_6|key_buf:comb_6|key_code[1] ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 25.600 ns                        ; key_led:comb_6|key_buf:comb_6|key_code[0] ; led[8]                                    ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 1.800 ns                         ; column[1]                                 ; key_led:comb_6|key_buf:comb_6|key_code[0] ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 87.72 MHz ( period = 11.400 ns ) ; key_led:comb_6|count4:comb_4|out[1]       ; key_led:comb_6|key_buf:comb_6|key_code[1] ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                           ;                                           ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+-------------------------------------------+-------------------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EPF10K30ATC144-3   ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                                                                                                                                         ;
++-------+------------------------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                                                                      ; To                                                                                        ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 87.72 MHz ( period = 11.400 ns )               ; key_led:comb_6|count4:comb_4|out[1]                                                       ; key_led:comb_6|key_buf:comb_6|key_code[1]                                                 ; clk        ; clk      ; None                        ; None                      ; 9.300 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )               ; key_led:comb_6|count4:comb_4|out[1]                                                       ; key_led:comb_6|key_buf:comb_6|key_code[2]                                                 ; clk        ; clk      ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 101.01 MHz ( period = 9.900 ns )               ; key_led:comb_6|count4:comb_4|out[0]                                                       ; key_led:comb_6|key_buf:comb_6|key_code[1]                                                 ; clk        ; clk      ; None                        ; None                      ; 7.800 ns                ;
+; N/A   ; 104.17 MHz ( period = 9.600 ns )               ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 7.500 ns                ;
+; N/A   ; 104.17 MHz ( period = 9.600 ns )               ; key_led:comb_6|count4:comb_4|out[1]                                                       ; key_led:comb_6|key_buf:comb_6|key_code[0]                                                 ; clk        ; clk      ; None                        ; None                      ; 7.500 ns                ;
+; N/A   ; 105.26 MHz ( period = 9.500 ns )               ; key_led:comb_6|count4:comb_4|out[1]                                                       ; key_led:comb_6|key_buf:comb_6|key_code[3]                                                 ; clk        ; clk      ; None                        ; None                      ; 7.400 ns                ;
+; N/A   ; 108.70 MHz ( period = 9.200 ns )               ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 7.100 ns                ;
+; N/A   ; 111.11 MHz ( period = 9.000 ns )               ; key_led:comb_6|count4:comb_4|out[0]                                                       ; key_led:comb_6|key_buf:comb_6|key_code[0]                                                 ; clk        ; clk      ; None                        ; None                      ; 6.900 ns                ;
+; N/A   ; 113.64 MHz ( period = 8.800 ns )               ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 6.700 ns                ;
+; N/A   ; 114.94 MHz ( period = 8.700 ns )               ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 6.600 ns                ;
+; N/A   ; 116.28 MHz ( period = 8.600 ns )               ; key_led:comb_6|count4:comb_4|out[0]                                                       ; key_led:comb_6|key_buf:comb_6|key_code[2]                                                 ; clk        ; clk      ; None                        ; None                      ; 6.500 ns                ;
+; N/A   ; 119.05 MHz ( period = 8.400 ns )               ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 6.300 ns                ;
+; N/A   ; 120.48 MHz ( period = 8.300 ns )               ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 6.200 ns                ;
+; N/A   ; 120.48 MHz ( period = 8.300 ns )               ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; clk        ; clk      ; None                        ; None                      ; 6.200 ns                ;
+; N/A   ; 123.46 MHz ( period = 8.100 ns )               ; key_led:comb_6|count4:comb_4|out[0]                                                       ; key_led:comb_6|key_buf:comb_6|key_code[3]                                                 ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 5.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; clk        ; clk      ; None                        ; None                      ; 5.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; clk        ; clk      ; None                        ; None                      ; 5.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 5.400 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 5.400 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; clk        ; clk      ; None                        ; None                      ; 5.400 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; clk        ; clk      ; None                        ; None                      ; 5.400 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; clk        ; clk      ; None                        ; None                      ; 5.400 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 5.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; clk        ; clk      ; None                        ; None                      ; 5.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; clk        ; clk      ; None                        ; None                      ; 5.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; clk        ; clk      ; None                        ; None                      ; 5.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; clk        ; clk      ; None                        ; None                      ; 5.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 4.600 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; clk        ; clk      ; None                        ; None                      ; 4.600 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; clk        ; clk      ; None                        ; None                      ; 4.600 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; clk        ; clk      ; None                        ; None                      ; 4.600 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; clk        ; clk      ; None                        ; None                      ; 4.600 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 4.500 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 4.200 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; clk        ; clk      ; None                        ; None                      ; 4.200 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; clk        ; clk      ; None                        ; None                      ; 4.200 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; clk        ; clk      ; None                        ; None                      ; 4.200 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; clk        ; clk      ; None                        ; None                      ; 4.200 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 4.100 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; clk        ; clk      ; None                        ; None                      ; 4.100 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 3.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; clk        ; clk      ; None                        ; None                      ; 3.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; clk        ; clk      ; None                        ; None                      ; 3.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; clk        ; clk      ; None                        ; None                      ; 3.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; clk        ; clk      ; None                        ; None                      ; 3.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 3.700 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; clk        ; clk      ; None                        ; None                      ; 3.700 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; clk        ; clk      ; None                        ; None                      ; 3.700 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 3.400 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; clk        ; clk      ; None                        ; None                      ; 3.400 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; clk        ; clk      ; None                        ; None                      ; 3.400 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; clk        ; clk      ; None                        ; None                      ; 3.400 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 3.300 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; clk        ; clk      ; None                        ; None                      ; 3.300 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; clk        ; clk      ; None                        ; None                      ; 3.300 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; clk        ; clk      ; None                        ; None                      ; 3.300 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 3.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; key_led:comb_6|count4:comb_4|out[0]                                                       ; key_led:comb_6|count4:comb_4|out[1]                                                       ; clk        ; clk      ; None                        ; None                      ; 3.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; clk        ; clk      ; None                        ; None                      ; 3.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; clk        ; clk      ; None                        ; None                      ; 3.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 2.900 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; clk        ; clk      ; None                        ; None                      ; 2.900 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; clk        ; clk      ; None                        ; None                      ; 2.900 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; clk        ; clk      ; None                        ; None                      ; 2.900 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; clk        ; clk      ; None                        ; None                      ; 2.900 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; clk        ; clk      ; None                        ; None                      ; 2.900 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 2.600 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; clk        ; clk      ; None                        ; None                      ; 2.600 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 2.500 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; clk        ; clk      ; None                        ; None                      ; 2.500 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; clk        ; clk      ; None                        ; None                      ; 2.500 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; clk        ; clk      ; None                        ; None                      ; 2.500 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; clk        ; clk      ; None                        ; None                      ; 2.500 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; clk        ; clk      ; None                        ; None                      ; 2.500 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; clk        ; clk      ; None                        ; None                      ; 2.500 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; clk        ; clk      ; None                        ; None                      ; 2.500 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 2.100 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; clk        ; clk      ; None                        ; None                      ; 2.100 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; clk        ; clk      ; None                        ; None                      ; 2.100 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; clk        ; clk      ; None                        ; None                      ; 2.100 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; clk        ; clk      ; None                        ; None                      ; 2.100 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; clk        ; clk      ; None                        ; None                      ; 2.100 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; clk        ; clk      ; None                        ; None                      ; 2.100 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; clk        ; clk      ; None                        ; None                      ; 2.100 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; clk        ; clk      ; None                        ; None                      ; 2.100 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; clk        ; clk      ; None                        ; None                      ; 2.100 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 2.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 2.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; clk        ; clk      ; None                        ; None                      ; 2.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; clk        ; clk      ; None                        ; None                      ; 2.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; clk        ; clk      ; None                        ; None                      ; 2.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; clk        ; clk      ; None                        ; None                      ; 2.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; clk        ; clk      ; None                        ; None                      ; 2.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; clk        ; clk      ; None                        ; None                      ; 2.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; clk        ; clk      ; None                        ; None                      ; 2.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; clk        ; clk      ; None                        ; None                      ; 2.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; clk        ; clk      ; None                        ; None                      ; 2.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; clk        ; clk      ; None                        ; None                      ; 2.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; clk        ; clk      ; None                        ; None                      ; 2.000 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; key_led:comb_6|count4:comb_4|out[0]                                                       ; key_led:comb_6|count4:comb_4|out[0]                                                       ; clk        ; clk      ; None                        ; None                      ; 1.600 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; key_led:comb_6|count4:comb_4|out[1]                                                       ; key_led:comb_6|count4:comb_4|out[1]                                                       ; clk        ; clk      ; None                        ; None                      ; 1.600 ns                ;
++-------+------------------------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                  ;
++-------+--------------+------------+-----------+-------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From      ; To                                        ; To Clock ;
++-------+--------------+------------+-----------+-------------------------------------------+----------+
+; N/A   ; None         ; 11.200 ns  ; column[0] ; key_led:comb_6|key_buf:comb_6|key_code[1] ; clk      ;
+; N/A   ; None         ; 11.200 ns  ; column[2] ; key_led:comb_6|key_buf:comb_6|key_code[1] ; clk      ;
+; N/A   ; None         ; 11.200 ns  ; column[1] ; key_led:comb_6|key_buf:comb_6|key_code[1] ; clk      ;
+; N/A   ; None         ; 10.100 ns  ; column[1] ; key_led:comb_6|key_buf:comb_6|key_code[2] ; clk      ;
+; N/A   ; None         ; 10.000 ns  ; column[0] ; key_led:comb_6|key_buf:comb_6|key_code[2] ; clk      ;
+; N/A   ; None         ; 9.900 ns   ; column[2] ; key_led:comb_6|key_buf:comb_6|key_code[2] ; clk      ;
+; N/A   ; None         ; 9.600 ns   ; column[0] ; key_led:comb_6|key_buf:comb_6|key_code[0] ; clk      ;
+; N/A   ; None         ; 9.600 ns   ; column[2] ; key_led:comb_6|key_buf:comb_6|key_code[0] ; clk      ;
+; N/A   ; None         ; 9.600 ns   ; column[1] ; key_led:comb_6|key_buf:comb_6|key_code[0] ; clk      ;
+; N/A   ; None         ; 9.500 ns   ; column[0] ; key_led:comb_6|key_buf:comb_6|key_code[3] ; clk      ;
+; N/A   ; None         ; 9.500 ns   ; column[2] ; key_led:comb_6|key_buf:comb_6|key_code[3] ; clk      ;
+; N/A   ; None         ; 9.500 ns   ; column[1] ; key_led:comb_6|key_buf:comb_6|key_code[3] ; clk      ;
++-------+--------------+------------+-----------+-------------------------------------------+----------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; tco                                                                                                 ;
++-------+--------------+------------+-------------------------------------------+--------+------------+
+; Slack ; Required tco ; Actual tco ; From                                      ; To     ; From Clock ;
++-------+--------------+------------+-------------------------------------------+--------+------------+
+; N/A   ; None         ; 25.600 ns  ; key_led:comb_6|key_buf:comb_6|key_code[0] ; led[9] ; clk        ;
+; N/A   ; None         ; 25.600 ns  ; key_led:comb_6|key_buf:comb_6|key_code[0] ; led[8] ; clk        ;
+; N/A   ; None         ; 25.500 ns  ; key_led:comb_6|key_buf:comb_6|key_code[1] ; led[9] ; clk        ;
+; N/A   ; None         ; 25.500 ns  ; key_led:comb_6|key_buf:comb_6|key_code[1] ; led[8] ; clk        ;
+; N/A   ; None         ; 25.500 ns  ; key_led:comb_6|key_buf:comb_6|key_code[0] ; led[7] ; clk        ;
+; N/A   ; None         ; 25.500 ns  ; key_led:comb_6|key_buf:comb_6|key_code[0] ; led[6] ; clk        ;
+; N/A   ; None         ; 25.400 ns  ; key_led:comb_6|key_buf:comb_6|key_code[2] ; led[9] ; clk        ;
+; N/A   ; None         ; 25.400 ns  ; key_led:comb_6|key_buf:comb_6|key_code[3] ; led[9] ; clk        ;
+; N/A   ; None         ; 25.400 ns  ; key_led:comb_6|key_buf:comb_6|key_code[2] ; led[8] ; clk        ;
+; N/A   ; None         ; 25.400 ns  ; key_led:comb_6|key_buf:comb_6|key_code[3] ; led[8] ; clk        ;
+; N/A   ; None         ; 25.400 ns  ; key_led:comb_6|key_buf:comb_6|key_code[1] ; led[7] ; clk        ;
+; N/A   ; None         ; 25.400 ns  ; key_led:comb_6|key_buf:comb_6|key_code[1] ; led[6] ; clk        ;
+; N/A   ; None         ; 25.300 ns  ; key_led:comb_6|key_buf:comb_6|key_code[2] ; led[7] ; clk        ;
+; N/A   ; None         ; 25.300 ns  ; key_led:comb_6|key_buf:comb_6|key_code[3] ; led[7] ; clk        ;
+; N/A   ; None         ; 25.300 ns  ; key_led:comb_6|key_buf:comb_6|key_code[2] ; led[6] ; clk        ;
+; N/A   ; None         ; 25.300 ns  ; key_led:comb_6|key_buf:comb_6|key_code[3] ; led[6] ; clk        ;
+; N/A   ; None         ; 24.900 ns  ; key_led:comb_6|key_buf:comb_6|key_code[0] ; led[2] ; clk        ;
+; N/A   ; None         ; 24.800 ns  ; key_led:comb_6|key_buf:comb_6|key_code[1] ; led[2] ; clk        ;
+; N/A   ; None         ; 24.700 ns  ; key_led:comb_6|key_buf:comb_6|key_code[2] ; led[2] ; clk        ;
+; N/A   ; None         ; 24.700 ns  ; key_led:comb_6|key_buf:comb_6|key_code[3] ; led[2] ; clk        ;
+; N/A   ; None         ; 24.500 ns  ; key_led:comb_6|key_buf:comb_6|key_code[2] ; led[5] ; clk        ;
+; N/A   ; None         ; 24.500 ns  ; key_led:comb_6|key_buf:comb_6|key_code[3] ; led[5] ; clk        ;
+; N/A   ; None         ; 24.500 ns  ; key_led:comb_6|key_buf:comb_6|key_code[2] ; led[4] ; clk        ;
+; N/A   ; None         ; 24.500 ns  ; key_led:comb_6|key_buf:comb_6|key_code[3] ; led[4] ; clk        ;
+; N/A   ; None         ; 24.500 ns  ; key_led:comb_6|key_buf:comb_6|key_code[2] ; led[3] ; clk        ;
+; N/A   ; None         ; 24.500 ns  ; key_led:comb_6|key_buf:comb_6|key_code[3] ; led[3] ; clk        ;
+; N/A   ; None         ; 24.300 ns  ; key_led:comb_6|key_buf:comb_6|key_code[2] ; led[1] ; clk        ;
+; N/A   ; None         ; 24.300 ns  ; key_led:comb_6|key_buf:comb_6|key_code[3] ; led[1] ; clk        ;
+; N/A   ; None         ; 24.300 ns  ; key_led:comb_6|key_buf:comb_6|key_code[2] ; led[0] ; clk        ;
+; N/A   ; None         ; 24.300 ns  ; key_led:comb_6|key_buf:comb_6|key_code[3] ; led[0] ; clk        ;
+; N/A   ; None         ; 23.100 ns  ; key_led:comb_6|key_buf:comb_6|key_code[0] ; led[5] ; clk        ;
+; N/A   ; None         ; 23.100 ns  ; key_led:comb_6|key_buf:comb_6|key_code[0] ; led[4] ; clk        ;
+; N/A   ; None         ; 23.100 ns  ; key_led:comb_6|key_buf:comb_6|key_code[0] ; led[3] ; clk        ;
+; N/A   ; None         ; 23.000 ns  ; key_led:comb_6|key_buf:comb_6|key_code[1] ; led[5] ; clk        ;
+; N/A   ; None         ; 23.000 ns  ; key_led:comb_6|key_buf:comb_6|key_code[1] ; led[4] ; clk        ;
+; N/A   ; None         ; 23.000 ns  ; key_led:comb_6|key_buf:comb_6|key_code[1] ; led[3] ; clk        ;
+; N/A   ; None         ; 22.900 ns  ; key_led:comb_6|key_buf:comb_6|key_code[0] ; led[1] ; clk        ;
+; N/A   ; None         ; 22.900 ns  ; key_led:comb_6|key_buf:comb_6|key_code[0] ; led[0] ; clk        ;
+; N/A   ; None         ; 22.800 ns  ; key_led:comb_6|key_buf:comb_6|key_code[1] ; led[1] ; clk        ;
+; N/A   ; None         ; 22.800 ns  ; key_led:comb_6|key_buf:comb_6|key_code[1] ; led[0] ; clk        ;
+; N/A   ; None         ; 19.400 ns  ; key_led:comb_6|count4:comb_4|out[1]       ; sel[1] ; clk        ;
+; N/A   ; None         ; 19.100 ns  ; key_led:comb_6|count4:comb_4|out[0]       ; sel[0] ; clk        ;
++-------+--------------+------------+-------------------------------------------+--------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; th                                                                                                         ;
++---------------+-------------+-----------+-----------+-------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From      ; To                                        ; To Clock ;
++---------------+-------------+-----------+-----------+-------------------------------------------+----------+
+; N/A           ; None        ; 1.800 ns  ; column[1] ; key_led:comb_6|key_buf:comb_6|key_code[0] ; clk      ;
+; N/A           ; None        ; -0.500 ns ; column[0] ; key_led:comb_6|key_buf:comb_6|key_code[3] ; clk      ;
+; N/A           ; None        ; -0.500 ns ; column[2] ; key_led:comb_6|key_buf:comb_6|key_code[3] ; clk      ;
+; N/A           ; None        ; -0.500 ns ; column[1] ; key_led:comb_6|key_buf:comb_6|key_code[3] ; clk      ;
+; N/A           ; None        ; -1.900 ns ; column[0] ; key_led:comb_6|key_buf:comb_6|key_code[0] ; clk      ;
+; N/A           ; None        ; -1.900 ns ; column[2] ; key_led:comb_6|key_buf:comb_6|key_code[0] ; clk      ;
+; N/A           ; None        ; -4.300 ns ; column[0] ; key_led:comb_6|key_buf:comb_6|key_code[2] ; clk      ;
+; N/A           ; None        ; -4.300 ns ; column[2] ; key_led:comb_6|key_buf:comb_6|key_code[2] ; clk      ;
+; N/A           ; None        ; -4.300 ns ; column[1] ; key_led:comb_6|key_buf:comb_6|key_code[2] ; clk      ;
+; N/A           ; None        ; -5.700 ns ; column[0] ; key_led:comb_6|key_buf:comb_6|key_code[1] ; clk      ;
+; N/A           ; None        ; -5.700 ns ; column[2] ; key_led:comb_6|key_buf:comb_6|key_code[1] ; clk      ;
+; N/A           ; None        ; -5.700 ns ; column[1] ; key_led:comb_6|key_buf:comb_6|key_code[1] ; clk      ;
++---------------+-------------+-----------+-----------+-------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Jul 02 10:49:54 2020
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off lab5_1 -c lab5_1
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12]" as buffer
+Info: Clock "clk" has Internal fmax of 87.72 MHz between source register "key_led:comb_6|count4:comb_4|out[1]" and destination register "key_led:comb_6|key_buf:comb_6|key_code[1]" (period= 11.4 ns)
+    Info: + Longest register to register delay is 9.300 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC8_F35; Fanout = 10; REG Node = 'key_led:comb_6|count4:comb_4|out[1]'
+        Info: 2: + IC(1.600 ns) + CELL(2.300 ns) = 3.900 ns; Loc. = LC5_F34; Fanout = 1; COMB Node = 'key_led:comb_6|key_decode:comb_5|Mux2~4'
+        Info: 3: + IC(0.200 ns) + CELL(2.200 ns) = 6.300 ns; Loc. = LC1_F34; Fanout = 1; COMB Node = 'key_led:comb_6|key_decode:comb_5|Mux2~3'
+        Info: 4: + IC(1.600 ns) + CELL(1.400 ns) = 9.300 ns; Loc. = LC5_F36; Fanout = 10; REG Node = 'key_led:comb_6|key_buf:comb_6|key_code[1]'
+        Info: Total cell delay = 5.900 ns ( 63.44 % )
+        Info: Total interconnect delay = 3.400 ns ( 36.56 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 10.600 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.400 ns) = 1.400 ns; Loc. = PIN_55; Fanout = 13; CLK Node = 'clk'
+            Info: 2: + IC(2.200 ns) + CELL(0.700 ns) = 4.300 ns; Loc. = LC1_C27; Fanout = 7; REG Node = 'freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12]'
+            Info: 3: + IC(6.300 ns) + CELL(0.000 ns) = 10.600 ns; Loc. = LC5_F36; Fanout = 10; REG Node = 'key_led:comb_6|key_buf:comb_6|key_code[1]'
+            Info: Total cell delay = 2.100 ns ( 19.81 % )
+            Info: Total interconnect delay = 8.500 ns ( 80.19 % )
+        Info: - Longest clock path from clock "clk" to source register is 10.600 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.400 ns) = 1.400 ns; Loc. = PIN_55; Fanout = 13; CLK Node = 'clk'
+            Info: 2: + IC(2.200 ns) + CELL(0.700 ns) = 4.300 ns; Loc. = LC1_C27; Fanout = 7; REG Node = 'freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12]'
+            Info: 3: + IC(6.300 ns) + CELL(0.000 ns) = 10.600 ns; Loc. = LC8_F35; Fanout = 10; REG Node = 'key_led:comb_6|count4:comb_4|out[1]'
+            Info: Total cell delay = 2.100 ns ( 19.81 % )
+            Info: Total interconnect delay = 8.500 ns ( 80.19 % )
+    Info: + Micro clock to output delay of source is 0.700 ns
+    Info: + Micro setup delay of destination is 1.400 ns
+Info: tsu for register "key_led:comb_6|key_buf:comb_6|key_code[1]" (data pin = "column[0]", clock pin = "clk") is 11.200 ns
+    Info: + Longest pin to register delay is 20.400 ns
+        Info: 1: + IC(0.000 ns) + CELL(5.900 ns) = 5.900 ns; Loc. = PIN_44; Fanout = 7; PIN Node = 'column[0]'
+        Info: 2: + IC(3.100 ns) + CELL(2.200 ns) = 11.200 ns; Loc. = LC3_F33; Fanout = 1; COMB Node = 'key_led:comb_6|key_decode:comb_5|Decoder0~1'
+        Info: 3: + IC(1.600 ns) + CELL(2.200 ns) = 15.000 ns; Loc. = LC5_F34; Fanout = 1; COMB Node = 'key_led:comb_6|key_decode:comb_5|Mux2~4'
+        Info: 4: + IC(0.200 ns) + CELL(2.200 ns) = 17.400 ns; Loc. = LC1_F34; Fanout = 1; COMB Node = 'key_led:comb_6|key_decode:comb_5|Mux2~3'
+        Info: 5: + IC(1.600 ns) + CELL(1.400 ns) = 20.400 ns; Loc. = LC5_F36; Fanout = 10; REG Node = 'key_led:comb_6|key_buf:comb_6|key_code[1]'
+        Info: Total cell delay = 13.900 ns ( 68.14 % )
+        Info: Total interconnect delay = 6.500 ns ( 31.86 % )
+    Info: + Micro setup delay of destination is 1.400 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 10.600 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.400 ns) = 1.400 ns; Loc. = PIN_55; Fanout = 13; CLK Node = 'clk'
+        Info: 2: + IC(2.200 ns) + CELL(0.700 ns) = 4.300 ns; Loc. = LC1_C27; Fanout = 7; REG Node = 'freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12]'
+        Info: 3: + IC(6.300 ns) + CELL(0.000 ns) = 10.600 ns; Loc. = LC5_F36; Fanout = 10; REG Node = 'key_led:comb_6|key_buf:comb_6|key_code[1]'
+        Info: Total cell delay = 2.100 ns ( 19.81 % )
+        Info: Total interconnect delay = 8.500 ns ( 80.19 % )
+Info: tco from clock "clk" to destination pin "led[9]" through register "key_led:comb_6|key_buf:comb_6|key_code[0]" is 25.600 ns
+    Info: + Longest clock path from clock "clk" to source register is 10.600 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.400 ns) = 1.400 ns; Loc. = PIN_55; Fanout = 13; CLK Node = 'clk'
+        Info: 2: + IC(2.200 ns) + CELL(0.700 ns) = 4.300 ns; Loc. = LC1_C27; Fanout = 7; REG Node = 'freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12]'
+        Info: 3: + IC(6.300 ns) + CELL(0.000 ns) = 10.600 ns; Loc. = LC7_F36; Fanout = 10; REG Node = 'key_led:comb_6|key_buf:comb_6|key_code[0]'
+        Info: Total cell delay = 2.100 ns ( 19.81 % )
+        Info: Total interconnect delay = 8.500 ns ( 80.19 % )
+    Info: + Micro clock to output delay of source is 0.700 ns
+    Info: + Longest register to pin delay is 14.300 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC7_F36; Fanout = 10; REG Node = 'key_led:comb_6|key_buf:comb_6|key_code[0]'
+        Info: 2: + IC(2.100 ns) + CELL(2.300 ns) = 4.400 ns; Loc. = LC3_F20; Fanout = 1; COMB Node = 'bcd_led:comb_7|WideOr0~0'
+        Info: 3: + IC(3.600 ns) + CELL(6.300 ns) = 14.300 ns; Loc. = PIN_9; Fanout = 0; PIN Node = 'led[9]'
+        Info: Total cell delay = 8.600 ns ( 60.14 % )
+        Info: Total interconnect delay = 5.700 ns ( 39.86 % )
+Info: th for register "key_led:comb_6|key_buf:comb_6|key_code[0]" (data pin = "column[1]", clock pin = "clk") is 1.800 ns
+    Info: + Longest clock path from clock "clk" to destination register is 10.600 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.400 ns) = 1.400 ns; Loc. = PIN_55; Fanout = 13; CLK Node = 'clk'
+        Info: 2: + IC(2.200 ns) + CELL(0.700 ns) = 4.300 ns; Loc. = LC1_C27; Fanout = 7; REG Node = 'freq_div:comb_5|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12]'
+        Info: 3: + IC(6.300 ns) + CELL(0.000 ns) = 10.600 ns; Loc. = LC7_F36; Fanout = 10; REG Node = 'key_led:comb_6|key_buf:comb_6|key_code[0]'
+        Info: Total cell delay = 2.100 ns ( 19.81 % )
+        Info: Total interconnect delay = 8.500 ns ( 80.19 % )
+    Info: + Micro hold delay of destination is 1.700 ns
+    Info: - Shortest pin to register delay is 10.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(5.900 ns) = 5.900 ns; Loc. = PIN_43; Fanout = 7; PIN Node = 'column[1]'
+        Info: 2: + IC(3.200 ns) + CELL(1.400 ns) = 10.500 ns; Loc. = LC7_F36; Fanout = 10; REG Node = 'key_led:comb_6|key_buf:comb_6|key_code[0]'
+        Info: Total cell delay = 7.300 ns ( 69.52 % )
+        Info: Total interconnect delay = 3.200 ns ( 30.48 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 199 megabytes
+    Info: Processing ended: Thu Jul 02 10:49:55 2020
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

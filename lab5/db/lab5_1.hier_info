@@ -1,0 +1,145 @@
+|lab5_1
+clk => clk~0.IN1
+reset => reset~0.IN2
+column[0] => column[0]~2.IN1
+column[1] => column[1]~1.IN1
+column[2] => column[2]~0.IN1
+sel[0] <= key_led:comb_6.port3
+sel[1] <= key_led:comb_6.port3
+sel[2] <= key_led:comb_6.port3
+led[0] <= bcd_led:comb_7.port1
+led[1] <= bcd_led:comb_7.port1
+led[2] <= bcd_led:comb_7.port1
+led[3] <= bcd_led:comb_7.port1
+led[4] <= bcd_led:comb_7.port1
+led[5] <= bcd_led:comb_7.port1
+led[6] <= bcd_led:comb_7.port1
+led[7] <= bcd_led:comb_7.port1
+led[8] <= bcd_led:comb_7.port1
+led[9] <= bcd_led:comb_7.port1
+led_com <= <VCC>
+
+
+|lab5_1|freq_div:comb_5
+clk_in => divider[12].CLK
+clk_in => divider[11].CLK
+clk_in => divider[10].CLK
+clk_in => divider[9].CLK
+clk_in => divider[8].CLK
+clk_in => divider[7].CLK
+clk_in => divider[6].CLK
+clk_in => divider[5].CLK
+clk_in => divider[4].CLK
+clk_in => divider[3].CLK
+clk_in => divider[2].CLK
+clk_in => divider[1].CLK
+clk_in => divider[0].CLK
+reset => divider[12].ACLR
+reset => divider[11].ACLR
+reset => divider[10].ACLR
+reset => divider[9].ACLR
+reset => divider[8].ACLR
+reset => divider[7].ACLR
+reset => divider[6].ACLR
+reset => divider[5].ACLR
+reset => divider[4].ACLR
+reset => divider[3].ACLR
+reset => divider[2].ACLR
+reset => divider[1].ACLR
+reset => divider[0].ACLR
+clk_out <= divider[12].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab5_1|key_led:comb_6
+clk_sel => clk_sel~0.IN2
+reset => reset~0.IN1
+column[0] => column[0]~2.IN1
+column[1] => column[1]~1.IN1
+column[2] => column[2]~0.IN1
+sel[0] <= sel[0]~2.DB_MAX_OUTPUT_PORT_TYPE
+sel[1] <= sel[1]~1.DB_MAX_OUTPUT_PORT_TYPE
+sel[2] <= sel[2]~0.DB_MAX_OUTPUT_PORT_TYPE
+key_code[0] <= key_buf:comb_6.port4
+key_code[1] <= key_buf:comb_6.port4
+key_code[2] <= key_buf:comb_6.port4
+key_code[3] <= key_buf:comb_6.port4
+
+
+|lab5_1|key_led:comb_6|count4:comb_4
+clk => out[2]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[0]~reg0.CLK
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab5_1|key_led:comb_6|key_decode:comb_5
+sel[0] => Mux4.IN10
+sel[0] => Mux3.IN10
+sel[0] => Mux2.IN10
+sel[0] => Mux1.IN10
+sel[0] => Mux0.IN10
+sel[1] => Mux4.IN9
+sel[1] => Mux3.IN9
+sel[1] => Mux2.IN9
+sel[1] => Mux1.IN9
+sel[1] => Mux0.IN9
+sel[2] => Mux4.IN8
+sel[2] => Mux3.IN8
+sel[2] => Mux2.IN8
+sel[2] => Mux1.IN8
+sel[2] => Mux0.IN8
+column[0] => Equal0.IN5
+column[0] => Decoder0.IN2
+column[1] => Equal0.IN4
+column[1] => Decoder0.IN1
+column[2] => Equal0.IN3
+column[2] => Decoder0.IN0
+press <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+scan_code[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+scan_code[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+scan_code[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+scan_code[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab5_1|key_led:comb_6|key_buf:comb_6
+clk_sel => key_code[3]~reg0.CLK
+clk_sel => key_code[2]~reg0.CLK
+clk_sel => key_code[1]~reg0.CLK
+clk_sel => key_code[0]~reg0.CLK
+rst => key_code[3]~reg0.PRESET
+rst => key_code[2]~reg0.PRESET
+rst => key_code[1]~reg0.PRESET
+rst => key_code[0]~reg0.PRESET
+press => key_code[0]~reg0.ENA
+press => key_code[3]~reg0.ENA
+press => key_code[2]~reg0.ENA
+press => key_code[1]~reg0.ENA
+scan_code[0] => key_code[0]~reg0.DATAIN
+scan_code[1] => key_code[1]~reg0.DATAIN
+scan_code[2] => key_code[2]~reg0.DATAIN
+scan_code[3] => key_code[3]~reg0.DATAIN
+key_code[0] <= key_code[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+key_code[1] <= key_code[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+key_code[2] <= key_code[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+key_code[3] <= key_code[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab5_1|bcd_led:comb_7
+key_code[0] => Decoder0.IN3
+key_code[1] => Decoder0.IN2
+key_code[2] => Decoder0.IN1
+key_code[3] => Decoder0.IN0
+led[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+led[6] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+led[7] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+led[8] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+led[9] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
