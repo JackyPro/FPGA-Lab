@@ -1,0 +1,97 @@
+|lab1_2
+clk => clk~0.IN1
+reset => reset~0.IN2
+shift_out[0] <= lab02_2:M2.port2
+shift_out[1] <= lab02_2:M2.port2
+shift_out[2] <= lab02_2:M2.port2
+shift_out[3] <= lab02_2:M2.port2
+shift_out[4] <= lab02_2:M2.port2
+shift_out[5] <= lab02_2:M2.port2
+shift_out[6] <= lab02_2:M2.port2
+shift_out[7] <= lab02_2:M2.port2
+ctl_bit <= <VCC>
+
+
+|lab1_2|freq_div:M1
+clk_in => divider[24].CLK
+clk_in => divider[23].CLK
+clk_in => divider[22].CLK
+clk_in => divider[21].CLK
+clk_in => divider[20].CLK
+clk_in => divider[19].CLK
+clk_in => divider[18].CLK
+clk_in => divider[17].CLK
+clk_in => divider[16].CLK
+clk_in => divider[15].CLK
+clk_in => divider[14].CLK
+clk_in => divider[13].CLK
+clk_in => divider[12].CLK
+clk_in => divider[11].CLK
+clk_in => divider[10].CLK
+clk_in => divider[9].CLK
+clk_in => divider[8].CLK
+clk_in => divider[7].CLK
+clk_in => divider[6].CLK
+clk_in => divider[5].CLK
+clk_in => divider[4].CLK
+clk_in => divider[3].CLK
+clk_in => divider[2].CLK
+clk_in => divider[1].CLK
+clk_in => divider[0].CLK
+reset => divider[24].ACLR
+reset => divider[23].ACLR
+reset => divider[22].ACLR
+reset => divider[21].ACLR
+reset => divider[20].ACLR
+reset => divider[19].ACLR
+reset => divider[18].ACLR
+reset => divider[17].ACLR
+reset => divider[16].ACLR
+reset => divider[15].ACLR
+reset => divider[14].ACLR
+reset => divider[13].ACLR
+reset => divider[12].ACLR
+reset => divider[11].ACLR
+reset => divider[10].ACLR
+reset => divider[9].ACLR
+reset => divider[8].ACLR
+reset => divider[7].ACLR
+reset => divider[6].ACLR
+reset => divider[5].ACLR
+reset => divider[4].ACLR
+reset => divider[3].ACLR
+reset => divider[2].ACLR
+reset => divider[1].ACLR
+reset => divider[0].ACLR
+clk_out <= divider[24].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1_2|lab02_2:M2
+clk => pattern[8].CLK
+clk => pattern[7].CLK
+clk => pattern[6].CLK
+clk => pattern[5].CLK
+clk => pattern[4].CLK
+clk => pattern[3].CLK
+clk => pattern[2].CLK
+clk => pattern[1].CLK
+clk => pattern[0].CLK
+reset => pattern[8].ACLR
+reset => pattern[7].PRESET
+reset => pattern[6].PRESET
+reset => pattern[5].ACLR
+reset => pattern[4].ACLR
+reset => pattern[3].ACLR
+reset => pattern[2].ACLR
+reset => pattern[1].ACLR
+reset => pattern[0].ACLR
+shift_out[0] <= pattern[0].DB_MAX_OUTPUT_PORT_TYPE
+shift_out[1] <= pattern[1].DB_MAX_OUTPUT_PORT_TYPE
+shift_out[2] <= pattern[2].DB_MAX_OUTPUT_PORT_TYPE
+shift_out[3] <= pattern[3].DB_MAX_OUTPUT_PORT_TYPE
+shift_out[4] <= pattern[4].DB_MAX_OUTPUT_PORT_TYPE
+shift_out[5] <= pattern[5].DB_MAX_OUTPUT_PORT_TYPE
+shift_out[6] <= pattern[6].DB_MAX_OUTPUT_PORT_TYPE
+shift_out[7] <= pattern[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
