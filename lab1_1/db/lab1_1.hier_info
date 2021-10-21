@@ -1,0 +1,85 @@
+|lab1_1
+clk => clk~0.IN1
+reset => reset~0.IN2
+shift_out[0] <= lab01_1:M2.port2
+shift_out[1] <= lab01_1:M2.port2
+shift_out[2] <= lab01_1:M2.port2
+shift_out[3] <= lab01_1:M2.port2
+shift_out[4] <= lab01_1:M2.port2
+shift_out[5] <= lab01_1:M2.port2
+shift_out[6] <= lab01_1:M2.port2
+shift_out[7] <= lab01_1:M2.port2
+ctl_bit <= <VCC>
+
+
+|lab1_1|freq_div:M1
+clk_in => divider[19].CLK
+clk_in => divider[18].CLK
+clk_in => divider[17].CLK
+clk_in => divider[16].CLK
+clk_in => divider[15].CLK
+clk_in => divider[14].CLK
+clk_in => divider[13].CLK
+clk_in => divider[12].CLK
+clk_in => divider[11].CLK
+clk_in => divider[10].CLK
+clk_in => divider[9].CLK
+clk_in => divider[8].CLK
+clk_in => divider[7].CLK
+clk_in => divider[6].CLK
+clk_in => divider[5].CLK
+clk_in => divider[4].CLK
+clk_in => divider[3].CLK
+clk_in => divider[2].CLK
+clk_in => divider[1].CLK
+clk_in => divider[0].CLK
+reset => divider[19].ACLR
+reset => divider[18].ACLR
+reset => divider[17].ACLR
+reset => divider[16].ACLR
+reset => divider[15].ACLR
+reset => divider[14].ACLR
+reset => divider[13].ACLR
+reset => divider[12].ACLR
+reset => divider[11].ACLR
+reset => divider[10].ACLR
+reset => divider[9].ACLR
+reset => divider[8].ACLR
+reset => divider[7].ACLR
+reset => divider[6].ACLR
+reset => divider[5].ACLR
+reset => divider[4].ACLR
+reset => divider[3].ACLR
+reset => divider[2].ACLR
+reset => divider[1].ACLR
+reset => divider[0].ACLR
+clk_out <= divider[19].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1_1|lab01_1:M2
+clk => shift_out[7]~reg0.CLK
+clk => shift_out[6]~reg0.CLK
+clk => shift_out[5]~reg0.CLK
+clk => shift_out[4]~reg0.CLK
+clk => shift_out[3]~reg0.CLK
+clk => shift_out[2]~reg0.CLK
+clk => shift_out[1]~reg0.CLK
+clk => shift_out[0]~reg0.CLK
+reset => shift_out[7]~reg0.PRESET
+reset => shift_out[6]~reg0.PRESET
+reset => shift_out[5]~reg0.ACLR
+reset => shift_out[4]~reg0.ACLR
+reset => shift_out[3]~reg0.ACLR
+reset => shift_out[2]~reg0.ACLR
+reset => shift_out[1]~reg0.ACLR
+reset => shift_out[0]~reg0.ACLR
+shift_out[0] <= shift_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+shift_out[1] <= shift_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+shift_out[2] <= shift_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+shift_out[3] <= shift_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+shift_out[4] <= shift_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+shift_out[5] <= shift_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+shift_out[6] <= shift_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+shift_out[7] <= shift_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
