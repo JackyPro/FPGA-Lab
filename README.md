@@ -3,7 +3,7 @@ Tool
 - Simulator: Modelsim
 - FPGA: Quartus 
 ### Lab  1 
-simple led controler 
+simple led controller 
 ### Lab  2 
 bcd2seg7
 ### Lab  3
