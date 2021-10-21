@@ -1,0 +1,2 @@
+clocknew.v succed!
+clock.v	failed:(

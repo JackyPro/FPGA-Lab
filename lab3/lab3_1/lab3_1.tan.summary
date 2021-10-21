@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 5.700 ns
+From           : enable
+To             : clock:m3|count_00_59_bcd:m8|lpm_counter:count1reg_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 36.700 ns
+From           : clock:m3|count_00_23_bcd:m6|lpm_counter:count0reg_rtl_2|alt_counter_f10ke:wysi_counter|counter_cell[0]
+To             : seg7_out[2]
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.200 ns
+From           : enable
+To             : clock:m3|count_00_59_bcd:m8|lpm_counter:count0reg_rtl_3|alt_counter_f10ke:wysi_counter|counter_cell[3]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 72.46 MHz ( period = 13.800 ns )
+From           : clock:m3|count_00_59_bcd:m8|lpm_counter:count1reg_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]
+To             : clock:m3|count_00_59_bcd:m8|lpm_counter:count1reg_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

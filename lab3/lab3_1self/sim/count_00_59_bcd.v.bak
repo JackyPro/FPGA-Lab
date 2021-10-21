@@ -1,0 +1,44 @@
+module 	count_00_59_bcd(clk,reset,enable,count1,count0,carry);
+
+input 	clk,reset,enable;
+output	[3:0]count1,count0;
+wire	[3:0]count1,count0;
+reg		[3:0]count1reg,count0reg;
+
+output 	reg	carry;
+
+assign 	count1=count1reg;
+assign	count0=count0reg;
+
+
+always@ (posedge clk or posedge reset)
+begin
+	if(reset) 
+		begin
+		carry<=1'd0;
+		count1reg<=4'd0;
+		count0reg<=4'd0;
+		end
+	else 	
+		if(enable == 1'b1)
+				casez({count1reg,count0reg})
+					8'd?9:	begin
+							count0reg<=4'd0;
+							count1reg<=count1reg+4'd1;
+							carry<=1'd0;
+							if(count1reg==4'd5)
+								if(count0reg==4'd9)	begin
+									count1reg<=4'd0;
+									count0reg<=4'd0;
+									carry<=1'b1;
+									end
+								else	
+									count0reg<=count0reg+4'd1;
+							else
+								count0reg<=count0reg+4'd1;
+							end
+					default:count0reg<=count0reg+4'd1;		
+		else if(!enable)
+				carry<=1'd0;
+end
+endmodule

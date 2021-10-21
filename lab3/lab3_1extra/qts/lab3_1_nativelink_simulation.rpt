@@ -1,0 +1,20 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  flex10ka
+Quartus root          :  c:/altera/90sp2/quartus/bin/
+Quartus sim root      :  c:/altera/90sp2/quartus/eda/sim_lib
+Simulation Tool       :  modelsim
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  lab3_1.vo
+Sim SDF File       :  lab3_1_v.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim software
+Sourced NativeLink script c:/altera/90sp2/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Info: Spawning ModelSim Simulation software 

@@ -1,0 +1,281 @@
+|lab3_1
+clk => clk~0.IN2
+reset => reset~0.IN4
+enable => enable~0.IN1
+seg7_sel[0] <= seg7_select:m5.port2
+seg7_sel[1] <= seg7_select:m5.port2
+seg7_sel[2] <= seg7_select:m5.port2
+seg7_out[0] <= bcd_to_seg7_1:m4.port1
+seg7_out[1] <= bcd_to_seg7_1:m4.port1
+seg7_out[2] <= bcd_to_seg7_1:m4.port1
+seg7_out[3] <= bcd_to_seg7_1:m4.port1
+seg7_out[4] <= bcd_to_seg7_1:m4.port1
+seg7_out[5] <= bcd_to_seg7_1:m4.port1
+seg7_out[6] <= bcd_to_seg7_1:m4.port1
+dpt <= dpt~3.DB_MAX_OUTPUT_PORT_TYPE
+carry <= clock:m3.port9
+led_com <= <VCC>
+
+
+|lab3_1|freq_div:m9
+clk_in => divider[14].CLK
+clk_in => divider[13].CLK
+clk_in => divider[12].CLK
+clk_in => divider[11].CLK
+clk_in => divider[10].CLK
+clk_in => divider[9].CLK
+clk_in => divider[8].CLK
+clk_in => divider[7].CLK
+clk_in => divider[6].CLK
+clk_in => divider[5].CLK
+clk_in => divider[4].CLK
+clk_in => divider[3].CLK
+clk_in => divider[2].CLK
+clk_in => divider[1].CLK
+clk_in => divider[0].CLK
+reset => divider[14].ACLR
+reset => divider[13].ACLR
+reset => divider[12].ACLR
+reset => divider[11].ACLR
+reset => divider[10].ACLR
+reset => divider[9].ACLR
+reset => divider[8].ACLR
+reset => divider[7].ACLR
+reset => divider[6].ACLR
+reset => divider[5].ACLR
+reset => divider[4].ACLR
+reset => divider[3].ACLR
+reset => divider[2].ACLR
+reset => divider[1].ACLR
+reset => divider[0].ACLR
+clk_out <= divider[14].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_1|onehz_freq:m2
+clk_in => countreg[23].CLK
+clk_in => countreg[22].CLK
+clk_in => countreg[21].CLK
+clk_in => countreg[20].CLK
+clk_in => countreg[19].CLK
+clk_in => countreg[18].CLK
+clk_in => countreg[17].CLK
+clk_in => countreg[16].CLK
+clk_in => countreg[15].CLK
+clk_in => countreg[14].CLK
+clk_in => countreg[13].CLK
+clk_in => countreg[12].CLK
+clk_in => countreg[11].CLK
+clk_in => countreg[10].CLK
+clk_in => countreg[9].CLK
+clk_in => countreg[8].CLK
+clk_in => countreg[7].CLK
+clk_in => countreg[6].CLK
+clk_in => countreg[5].CLK
+clk_in => countreg[4].CLK
+clk_in => countreg[3].CLK
+clk_in => countreg[2].CLK
+clk_in => countreg[1].CLK
+clk_in => countreg[0].CLK
+clk_in => carryreg.CLK
+reset => countreg[23].ACLR
+reset => countreg[22].ACLR
+reset => countreg[21].ACLR
+reset => countreg[20].ACLR
+reset => countreg[19].ACLR
+reset => countreg[18].ACLR
+reset => countreg[17].ACLR
+reset => countreg[16].ACLR
+reset => countreg[15].ACLR
+reset => countreg[14].ACLR
+reset => countreg[13].ACLR
+reset => countreg[12].ACLR
+reset => countreg[11].ACLR
+reset => countreg[10].ACLR
+reset => countreg[9].ACLR
+reset => countreg[8].ACLR
+reset => countreg[7].ACLR
+reset => countreg[6].ACLR
+reset => countreg[5].ACLR
+reset => countreg[4].ACLR
+reset => countreg[3].ACLR
+reset => countreg[2].ACLR
+reset => countreg[1].ACLR
+reset => countreg[0].ACLR
+reset => carryreg.ENA
+clk_count <= carryreg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_1|clock:m3
+clk => clk~0.IN3
+reset => reset~0.IN3
+enable => enable~0.IN1
+count5[0] <= count_00_23_bcd:m6.count1
+count5[1] <= count_00_23_bcd:m6.count1
+count5[2] <= count_00_23_bcd:m6.count1
+count5[3] <= count_00_23_bcd:m6.count1
+count4[0] <= count_00_23_bcd:m6.count0
+count4[1] <= count_00_23_bcd:m6.count0
+count4[2] <= count_00_23_bcd:m6.count0
+count4[3] <= count_00_23_bcd:m6.count0
+count3[0] <= count_00_59_bcd:m7.count1
+count3[1] <= count_00_59_bcd:m7.count1
+count3[2] <= count_00_59_bcd:m7.count1
+count3[3] <= count_00_59_bcd:m7.count1
+count2[0] <= count_00_59_bcd:m7.count0
+count2[1] <= count_00_59_bcd:m7.count0
+count2[2] <= count_00_59_bcd:m7.count0
+count2[3] <= count_00_59_bcd:m7.count0
+count1[0] <= count_00_59_bcd:m8.count1
+count1[1] <= count_00_59_bcd:m8.count1
+count1[2] <= count_00_59_bcd:m8.count1
+count1[3] <= count_00_59_bcd:m8.count1
+count0[0] <= count_00_59_bcd:m8.count0
+count0[1] <= count_00_59_bcd:m8.count0
+count0[2] <= count_00_59_bcd:m8.count0
+count0[3] <= count_00_59_bcd:m8.count0
+carry <= carry~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_1|clock:m3|count_00_23_bcd:m6
+clk => carryreg.CLK
+clk => count1reg[3].CLK
+clk => count1reg[2].CLK
+clk => count1reg[1].CLK
+clk => count1reg[0].CLK
+clk => count0reg[3].CLK
+clk => count0reg[2].CLK
+clk => count0reg[1].CLK
+clk => count0reg[0].CLK
+reset => carryreg.ACLR
+reset => count1reg[3].ACLR
+reset => count1reg[2].ACLR
+reset => count1reg[1].ACLR
+reset => count1reg[0].ACLR
+reset => count0reg[3].ACLR
+reset => count0reg[2].ACLR
+reset => count0reg[1].ACLR
+reset => count0reg[0].ACLR
+enable => count0reg[0].ENA
+enable => carryreg.ENA
+enable => count1reg[3].ENA
+enable => count1reg[2].ENA
+enable => count1reg[1].ENA
+enable => count1reg[0].ENA
+enable => count0reg[3].ENA
+enable => count0reg[2].ENA
+enable => count0reg[1].ENA
+count1[0] <= count1reg[0].DB_MAX_OUTPUT_PORT_TYPE
+count1[1] <= count1reg[1].DB_MAX_OUTPUT_PORT_TYPE
+count1[2] <= count1reg[2].DB_MAX_OUTPUT_PORT_TYPE
+count1[3] <= count1reg[3].DB_MAX_OUTPUT_PORT_TYPE
+count0[0] <= count0reg[0].DB_MAX_OUTPUT_PORT_TYPE
+count0[1] <= count0reg[1].DB_MAX_OUTPUT_PORT_TYPE
+count0[2] <= count0reg[2].DB_MAX_OUTPUT_PORT_TYPE
+count0[3] <= count0reg[3].DB_MAX_OUTPUT_PORT_TYPE
+carry <= carryreg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_1|clock:m3|count_00_59_bcd:m7
+clk => count1reg[3].CLK
+clk => count1reg[2].CLK
+clk => count1reg[1].CLK
+clk => count1reg[0].CLK
+clk => count0reg[3].CLK
+clk => count0reg[2].CLK
+clk => count0reg[1].CLK
+clk => count0reg[0].CLK
+clk => carryreg.CLK
+reset => count1reg[3].ACLR
+reset => count1reg[2].ACLR
+reset => count1reg[1].ACLR
+reset => count1reg[0].ACLR
+reset => count0reg[3].ACLR
+reset => count0reg[2].ACLR
+reset => count0reg[1].ACLR
+reset => count0reg[0].ACLR
+reset => carryreg.ACLR
+enable => carryreg.ENA
+enable => count1reg[3].ENA
+enable => count1reg[2].ENA
+enable => count1reg[1].ENA
+enable => count1reg[0].ENA
+enable => count0reg[3].ENA
+enable => count0reg[2].ENA
+enable => count0reg[1].ENA
+enable => count0reg[0].ENA
+count1[0] <= count1reg[0].DB_MAX_OUTPUT_PORT_TYPE
+count1[1] <= count1reg[1].DB_MAX_OUTPUT_PORT_TYPE
+count1[2] <= count1reg[2].DB_MAX_OUTPUT_PORT_TYPE
+count1[3] <= count1reg[3].DB_MAX_OUTPUT_PORT_TYPE
+count0[0] <= count0reg[0].DB_MAX_OUTPUT_PORT_TYPE
+count0[1] <= count0reg[1].DB_MAX_OUTPUT_PORT_TYPE
+count0[2] <= count0reg[2].DB_MAX_OUTPUT_PORT_TYPE
+count0[3] <= count0reg[3].DB_MAX_OUTPUT_PORT_TYPE
+carry <= carryreg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_1|clock:m3|count_00_59_bcd:m8
+clk => count1reg[3].CLK
+clk => count1reg[2].CLK
+clk => count1reg[1].CLK
+clk => count1reg[0].CLK
+clk => count0reg[3].CLK
+clk => count0reg[2].CLK
+clk => count0reg[1].CLK
+clk => count0reg[0].CLK
+clk => carryreg.CLK
+reset => count1reg[3].ACLR
+reset => count1reg[2].ACLR
+reset => count1reg[1].ACLR
+reset => count1reg[0].ACLR
+reset => count0reg[3].ACLR
+reset => count0reg[2].ACLR
+reset => count0reg[1].ACLR
+reset => count0reg[0].ACLR
+reset => carryreg.ACLR
+enable => carryreg.ENA
+enable => count1reg[3].ENA
+enable => count1reg[2].ENA
+enable => count1reg[1].ENA
+enable => count1reg[0].ENA
+enable => count0reg[3].ENA
+enable => count0reg[2].ENA
+enable => count0reg[1].ENA
+enable => count0reg[0].ENA
+count1[0] <= count1reg[0].DB_MAX_OUTPUT_PORT_TYPE
+count1[1] <= count1reg[1].DB_MAX_OUTPUT_PORT_TYPE
+count1[2] <= count1reg[2].DB_MAX_OUTPUT_PORT_TYPE
+count1[3] <= count1reg[3].DB_MAX_OUTPUT_PORT_TYPE
+count0[0] <= count0reg[0].DB_MAX_OUTPUT_PORT_TYPE
+count0[1] <= count0reg[1].DB_MAX_OUTPUT_PORT_TYPE
+count0[2] <= count0reg[2].DB_MAX_OUTPUT_PORT_TYPE
+count0[3] <= count0reg[3].DB_MAX_OUTPUT_PORT_TYPE
+carry <= carryreg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_1|bcd_to_seg7_1:m4
+bcd_in[0] => Decoder0.IN3
+bcd_in[1] => Decoder0.IN2
+bcd_in[2] => Decoder0.IN1
+bcd_in[3] => Decoder0.IN0
+seg7[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg7[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg7[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg7[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg7[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg7[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg7[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_1|seg7_select:m5
+clk => seg7_sel[2]~reg0.CLK
+clk => seg7_sel[1]~reg0.CLK
+clk => seg7_sel[0]~reg0.CLK
+reset => seg7_sel[2]~reg0.PRESET
+reset => seg7_sel[1]~reg0.ACLR
+reset => seg7_sel[0]~reg0.PRESET
+seg7_sel[0] <= seg7_sel[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg7_sel[1] <= seg7_sel[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg7_sel[2] <= seg7_sel[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

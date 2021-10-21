@@ -1,0 +1,186 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/altera/90sp2/quartus/lab3/lab3_1extra/qts/simulation/modelsim
+vbcd_to_seg7_1
+Z1 !s110 1595348417
+!i10b 1
+!s100 efckWe35072TQm>]ielSV2
+IRYn7X4KSGcQW0:SCM^jNm0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1592793049
+Z4 8C:/altera/90sp2/quartus/lab3/lab3_1extra/qts/lab3_1.v
+Z5 FC:/altera/90sp2/quartus/lab3/lab3_1extra/qts/lab3_1.v
+L0 191
+Z6 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z7 !s108 1595348417.000000
+Z8 !s107 C:/altera/90sp2/quartus/lab3/lab3_1extra/qts/lab3_1.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/90sp2/quartus/lab3/lab3_1extra/qts|C:/altera/90sp2/quartus/lab3/lab3_1extra/qts/lab3_1.v|
+!s101 -O0
+!i113 1
+Z10 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+Z11 !s92 -vlog01compat -work work +incdir+C:/altera/90sp2/quartus/lab3/lab3_1extra/qts -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+vclock
+R1
+!i10b 1
+!s100 2F>AzMOi0jQBn:UDI<_Xz1
+IB1ofS?BNQHhE<=20]c=6k1
+R2
+R0
+R3
+R4
+R5
+L0 33
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+R11
+vcount_00_23_bcd
+R1
+!i10b 1
+!s100 gnQY8oTDR]oWn>_LQoI[B2
+ITOhQVE7PV`gQ7TO98;cJ@1
+R2
+R0
+R3
+R4
+R5
+L0 55
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+R11
+vcount_00_59_bcd
+R1
+!i10b 1
+!s100 ?R]:2:EK7L]i0ig2aDnoO1
+I2gkKZ]]b@Tn?lI<^R:UEC0
+R2
+R0
+R3
+R4
+R5
+L0 100
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+R11
+vfreq_div
+R1
+!i10b 1
+!s100 ikCQ94MSA:^Qj:h8R;Cl=2
+Ihgz9eZ3Mf8Ph^eJ<8N5U;0
+R2
+R0
+R3
+R4
+R5
+L0 143
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+R11
+vlab3_1
+R1
+!i10b 1
+!s100 h8`a7`gnfhZ0C^NCgcZ6_1
+IJ3?nc6]dlVhJoQek^f48J3
+R2
+R0
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+R11
+vonehz_freq
+R1
+!i10b 1
+!s100 SSeBBi2N]?IG?NiOBOhWg3
+IQbTAIzocbFgKB0mQEm9U81
+R2
+R0
+R3
+R4
+R5
+L0 164
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+R11
+vseg7_select
+R1
+!i10b 1
+!s100 HZVeYO`e6Zz0W7g1BbVeU2
+IX;kkf05oD^Mg5aj7WnIAK3
+R2
+R0
+R3
+R4
+R5
+L0 213
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+R11

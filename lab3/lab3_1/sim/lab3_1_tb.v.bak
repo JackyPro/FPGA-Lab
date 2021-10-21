@@ -1,0 +1,33 @@
+`timescale 1 ns/1 ns
+
+module 	testbench;
+reg		reset, clk, ctl;
+reg		[7:0]	d, a, c, e;
+wire	[15:0]	d4;
+
+lab3_1 lab3_1_instance(clk,reset,enable,seg7_sel,seg7_out,dpt,carry,led_com);
+
+// set up clk with 50 ns period 20 MHz
+parameter clkper = 50;
+initial
+begin
+	clk = 1;	// Time = 0
+end
+
+always 
+begin
+	#(clkper / 2)  clk = ~clk;
+end
+
+initial
+begin
+ reset	= 1'b0;		
+ #20;			
+ reset  = 1'b1;
+ #24;			
+ enable = 1'b0;
+ #16;		
+ enable = 1'b1;
+ #800;			
+end
+endmodule

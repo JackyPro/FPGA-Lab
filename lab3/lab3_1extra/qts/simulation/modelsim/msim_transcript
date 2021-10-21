@@ -1,0 +1,68 @@
+# Reading C:/Modeltech_pe_edu_10.4a/tcl/vsim/pref.tcl
+# do lab3_1_run_msim_gate_verilog.do
+# if ![file isdirectory verilog_libs] {
+# 	file mkdir verilog_libs
+# }
+# 
+# vlib verilog_libs/flex10ke_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/flex10ke_ver".
+# 
+# vmap flex10ke_ver ./verilog_libs/flex10ke_ver
+# Model Technology ModelSim PE vmap 10.4a Lib Mapping Utility 2015.03 Apr  7 2015
+# vmap -modelsim_quiet flex10ke_ver ./verilog_libs/flex10ke_ver 
+# Copying C:/Modeltech_pe_edu_10.4a/win32pe_edu/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/Modeltech_pe_edu_10.4a/win32pe_edu/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# vlog -vlog01compat -work flex10ke_ver {c:/altera/90sp2/quartus/eda/sim_lib/flex10ke_atoms.v}
+# Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 00:20:46 on Jul 22,2020
+# vlog -reportprogress 300 -vlog01compat -work flex10ke_ver c:/altera/90sp2/quartus/eda/sim_lib/flex10ke_atoms.v 
+# -- Compiling module flex10ke_asynch_lcell
+# -- Compiling module flex10ke_lcell_register
+# -- Compiling module flex10ke_lcell
+# -- Compiling module flex10ke_io
+# -- Compiling module flex10ke_asynch_io
+# -- Compiling module flex10ke_asynch_mem
+# -- Compiling UDP PRIM_DFFE
+# -- Compiling module flex10ke_dffe
+# -- Compiling module dffe_io
+# -- Compiling module mux21
+# -- Compiling module and1
+# -- Compiling module and11
+# -- Compiling module nmux21
+# -- Compiling module bmux21
+# -- Compiling module b5mux21
+# -- Compiling module flex10ke_ram_slice
+# -- Compiling module flex10ke_pll
+# 
+# Top level modules:
+# 	flex10ke_lcell
+# 	flex10ke_io
+# 	and11
+# 	b5mux21
+# 	flex10ke_ram_slice
+# 	flex10ke_pll
+# End time: 00:20:47 on Jul 22,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim PE vmap 10.4a Lib Mapping Utility 2015.03 Apr  7 2015
+# vmap -modelsim_quiet work gate_work 
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {lab3_1.vo}
+# Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 00:20:47 on Jul 22,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." lab3_1.vo 
+# -- Compiling module lab3_1
+# 
+# Top level modules:
+# 	lab3_1
+# End time: 00:20:47 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 

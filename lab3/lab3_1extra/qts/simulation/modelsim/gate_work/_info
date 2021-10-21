@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/altera/90sp2/quartus/lab3/lab3_1extra/qts/simulation/modelsim
+vlab3_1
+!s110 1595348447
+!i10b 1
+!s100 XdBLiML8MbjBKAl[Tf5e11
+IY6>ZoYO=4T_e>MS_Y]2Pg3
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1595348193
+8lab3_1.vo
+Flab3_1.vo
+L0 31
+OP;L;10.4a;61
+r1
+!s85 0
+31
+!s108 1595348447.000000
+!s107 lab3_1.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|lab3_1.vo|
+!s101 -O0
+!i113 1
+o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+!s92 -vlog01compat -work work +incdir+. -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
