@@ -1,0 +1,345 @@
+Analysis & Synthesis report for lab4_1
+Thu Jul 09 21:25:46 2020
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. User-Specified and Inferred Latches
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Parameter Settings for User Entity Instance: freq_div:M1
+ 12. Parameter Settings for User Entity Instance: freq_div:M2
+ 13. Port Connectivity Checks: "rom_char:M5"
+ 14. Port Connectivity Checks: "row_gen:M4"
+ 15. Port Connectivity Checks: "idx_gen:M3"
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Jul 09 21:25:46 2020        ;
+; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name               ; lab4_1                                       ;
+; Top-level Entity Name       ; lab4_1                                       ;
+; Family                      ; FLEX10KA                                     ;
+; Total logic elements        ; 97                                           ;
+; Total pins                  ; 28                                           ;
+; Total memory bits           ; 0                                            ;
++-----------------------------+----------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                   ;
++--------------------------------------------------------------+------------------+---------------+
+; Option                                                       ; Setting          ; Default Value ;
++--------------------------------------------------------------+------------------+---------------+
+; Device                                                       ; EPF10K30ATC144-3 ;               ;
+; Top-level entity name                                        ; lab4_1           ; lab4_1        ;
+; Family name                                                  ; FLEX10KA         ; Stratix II    ;
+; Use Generated Physical Constraints File                      ; Off              ;               ;
+; Use smart compilation                                        ; Off              ; Off           ;
+; Create Debugging Nodes for IP Cores                          ; Off              ; Off           ;
+; Preserve fewer node names                                    ; On               ; On            ;
+; Disable OpenCore Plus hardware evaluation                    ; Off              ; Off           ;
+; Verilog Version                                              ; Verilog_2001     ; Verilog_2001  ;
+; VHDL Version                                                 ; VHDL93           ; VHDL93        ;
+; State Machine Processing                                     ; Auto             ; Auto          ;
+; Safe State Machine                                           ; Off              ; Off           ;
+; Extract Verilog State Machines                               ; On               ; On            ;
+; Extract VHDL State Machines                                  ; On               ; On            ;
+; Ignore Verilog initial constructs                            ; Off              ; Off           ;
+; Iteration limit for constant Verilog loops                   ; 5000             ; 5000          ;
+; Iteration limit for non-constant Verilog loops               ; 250              ; 250           ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On               ; On            ;
+; Parallel Synthesis                                           ; Off              ; Off           ;
+; NOT Gate Push-Back                                           ; On               ; On            ;
+; Power-Up Don't Care                                          ; On               ; On            ;
+; Remove Redundant Logic Cells                                 ; Off              ; Off           ;
+; Remove Duplicate Registers                                   ; On               ; On            ;
+; Ignore CARRY Buffers                                         ; Off              ; Off           ;
+; Ignore CASCADE Buffers                                       ; Off              ; Off           ;
+; Ignore GLOBAL Buffers                                        ; Off              ; Off           ;
+; Ignore ROW GLOBAL Buffers                                    ; Off              ; Off           ;
+; Ignore LCELL Buffers                                         ; Off              ; Off           ;
+; Ignore SOFT Buffers                                          ; On               ; On            ;
+; Limit AHDL Integers to 32 Bits                               ; Off              ; Off           ;
+; Auto Implement in ROM                                        ; Off              ; Off           ;
+; Optimization Technique                                       ; Area             ; Area          ;
+; Carry Chain Length                                           ; 32               ; 32            ;
+; Cascade Chain Length                                         ; 2                ; 2             ;
+; Auto Carry Chains                                            ; On               ; On            ;
+; Auto Open-Drain Pins                                         ; On               ; On            ;
+; Auto ROM Replacement                                         ; On               ; On            ;
+; Auto RAM Replacement                                         ; On               ; On            ;
+; Auto Clock Enable Replacement                                ; On               ; On            ;
+; Strict RAM Replacement                                       ; Off              ; Off           ;
+; Auto Resource Sharing                                        ; Off              ; Off           ;
+; Allow Any RAM Size For Recognition                           ; Off              ; Off           ;
+; Allow Any ROM Size For Recognition                           ; Off              ; Off           ;
+; Use LogicLock Constraints during Resource Balancing          ; On               ; On            ;
+; Ignore translate_off and synthesis_off directives            ; Off              ; Off           ;
+; Show Parameter Settings Tables in Synthesis Report           ; On               ; On            ;
+; HDL message level                                            ; Level2           ; Level2        ;
+; Suppress Register Optimization Related Messages              ; Off              ; Off           ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100              ; 100           ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100              ; 100           ;
+; Block Design Naming                                          ; Auto             ; Auto          ;
+; Synthesis Effort                                             ; Auto             ; Auto          ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On               ; On            ;
+; Analysis & Synthesis Message Level                           ; Medium           ; Medium        ;
++--------------------------------------------------------------+------------------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                     ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+
+; lab4_1.v                         ; yes             ; User Verilog HDL File  ; C:/altera/90sp2/quartus/lab4/lab4_1/qts/lab4_1.v ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++--------------------------------+-----------------------+
+; Resource                       ; Usage                 ;
++--------------------------------+-----------------------+
+; Total logic elements           ; 97                    ;
+; Total combinational functions  ; 87                    ;
+;     -- Total 4-input functions ; 49                    ;
+;     -- Total 3-input functions ; 18                    ;
+;     -- Total 2-input functions ; 16                    ;
+;     -- Total 1-input functions ; 4                     ;
+;     -- Total 0-input functions ; 0                     ;
+; Total registers                ; 21                    ;
+; I/O pins                       ; 28                    ;
+; Maximum fan-out node           ; row_gen:M4|idx_cnt[2] ;
+; Maximum fan-out                ; 29                    ;
+; Total fan-out                  ; 360                   ;
+; Average fan-out                ; 2.88                  ;
++--------------------------------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                    ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; |lab4_1                    ; 97 (12)     ; 21           ; 0           ; 28   ; 76 (12)      ; 10 (0)            ; 11 (0)           ; 0 (0)           ; 0 (0)      ; |lab4_1             ; work         ;
+;    |freq_div:M1|           ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab4_1|freq_div:M1 ; work         ;
+;    |freq_div:M2|           ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab4_1|freq_div:M2 ; work         ;
+;    |idx_gen:M3|            ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |lab4_1|idx_gen:M3  ; work         ;
+;    |rom_char:M5|           ; 64 (64)     ; 0            ; 0           ; 0    ; 64 (64)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab4_1|rom_char:M5 ; work         ;
+;    |row_gen:M4|            ; 15 (15)     ; 15           ; 0           ; 0    ; 0 (0)        ; 10 (10)           ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |lab4_1|row_gen:M4  ; work         ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; rom_char:M5|data[1]                                ; rom_char:M5|WideOr0 ; yes                    ;
+; rom_char:M5|data[2]                                ; rom_char:M5|WideOr0 ; yes                    ;
+; rom_char:M5|data[3]                                ; rom_char:M5|WideOr0 ; yes                    ;
+; rom_char:M5|data[4]                                ; rom_char:M5|WideOr0 ; yes                    ;
+; rom_char:M5|data[5]                                ; rom_char:M5|WideOr0 ; yes                    ;
+; rom_char:M5|data[6]                                ; rom_char:M5|WideOr0 ; yes                    ;
+; Number of user-specified and inferred latches = 6  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; idx_gen:M3|idx[0..2]                  ; Stuck at GND due to stuck port data_in ;
+; freq_div:M1|divider[0]                ; Merged with freq_div:M2|divider[0]     ;
+; row_gen:M4|cnt[0]                     ; Merged with row_gen:M4|idx_cnt[0]      ;
+; row_gen:M4|cnt[1]                     ; Merged with row_gen:M4|idx_cnt[1]      ;
+; row_gen:M4|cnt[2]                     ; Merged with row_gen:M4|idx_cnt[2]      ;
+; Total Number of Removed Registers = 7 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 21    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 21    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; row_gen:M4|row[7]                      ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: freq_div:M1 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; exp            ; 2     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: freq_div:M2 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; exp            ; 1     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rom_char:M5"                                                                                                                                                                    ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; addr ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (7 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "row_gen:M4"                                                                                                                                                                         ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                          ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; idx     ; Input  ; Warning  ; Input port expression (8 bits) is wider than the input port (7 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; idx_cnt ; Output ; Warning  ; Output or bidir port (7 bits) is smaller than the port expression (8 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND.            ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "idx_gen:M3"                                                                                                                                                           ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; idx  ; Output ; Warning  ; Output or bidir port (7 bits) is smaller than the port expression (8 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Jul 09 21:25:44 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab4_1 -c lab4_1
+Info: Found 5 design units, including 5 entities, in source file lab4_1.v
+    Info: Found entity 1: lab4_1
+    Info: Found entity 2: rom_char
+    Info: Found entity 3: idx_gen
+    Info: Found entity 4: row_gen
+    Info: Found entity 5: freq_div
+Warning (10236): Verilog HDL Implicit Net warning at lab4_1.v(13): created implicit net for "clk_idx"
+Warning (10236): Verilog HDL Implicit Net warning at lab4_1.v(15): created implicit net for "clk_row"
+Info: Elaborating entity "lab4_1" for the top level hierarchy
+Info: Elaborating entity "freq_div" for hierarchy "freq_div:M1"
+Warning (10240): Verilog HDL Always Construct warning at lab4_1.v(182): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Info: Elaborating entity "freq_div" for hierarchy "freq_div:M2"
+Warning (10240): Verilog HDL Always Construct warning at lab4_1.v(182): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Info: Elaborating entity "idx_gen" for hierarchy "idx_gen:M3"
+Info: Elaborating entity "row_gen" for hierarchy "row_gen:M4"
+Info: Elaborating entity "rom_char" for hierarchy "rom_char:M5"
+Warning (10270): Verilog HDL Case Statement warning at lab4_1.v(28): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at lab4_1.v(26): inferring latch(es) for variable "data", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "data[0]" at lab4_1.v(26)
+Info (10041): Inferred latch for "data[1]" at lab4_1.v(26)
+Info (10041): Inferred latch for "data[2]" at lab4_1.v(26)
+Info (10041): Inferred latch for "data[3]" at lab4_1.v(26)
+Info (10041): Inferred latch for "data[4]" at lab4_1.v(26)
+Info (10041): Inferred latch for "data[5]" at lab4_1.v(26)
+Info (10041): Inferred latch for "data[6]" at lab4_1.v(26)
+Info (10041): Inferred latch for "data[7]" at lab4_1.v(26)
+Warning: Net is missing source, defaulting to GND
+    Warning (12110): Net "idx_cnt[7]" is missing source, defaulting to GND
+Warning: Net is missing source, defaulting to GND
+    Warning (12110): Net "idx[7]" is missing source, defaulting to GND
+    Warning (12110): Net "idx_cnt[7]" is missing source, defaulting to GND
+Warning: Net is missing source, defaulting to GND
+    Warning (12110): Net "idx[7]" is missing source, defaulting to GND
+    Warning (12110): Net "idx_cnt[7]" is missing source, defaulting to GND
+Warning: Net is missing source, defaulting to GND
+    Warning (12110): Net "idx[7]" is missing source, defaulting to GND
+    Warning (12110): Net "idx_cnt[7]" is missing source, defaulting to GND
+Warning: 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning: Latch rom_char:M5|data[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal row_gen:M4|idx_cnt[6]
+Warning: Latch rom_char:M5|data[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal row_gen:M4|idx_cnt[6]
+Warning: Latch rom_char:M5|data[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal row_gen:M4|idx_cnt[6]
+Warning: Latch rom_char:M5|data[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal row_gen:M4|idx_cnt[6]
+Warning: Latch rom_char:M5|data[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal row_gen:M4|idx_cnt[6]
+Warning: Latch rom_char:M5|data[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal row_gen:M4|idx_cnt[6]
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "column_green[0]" is stuck at GND
+    Warning (13410): Pin "column_green[7]" is stuck at GND
+    Warning (13410): Pin "column_red[0]" is stuck at GND
+    Warning (13410): Pin "column_red[7]" is stuck at GND
+Info: Registers with preset signals will power-up high
+Info: Implemented 125 device resources after synthesis - the final resource count might be different
+    Info: Implemented 4 input pins
+    Info: Implemented 24 output pins
+    Info: Implemented 97 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 230 megabytes
+    Info: Processing ended: Thu Jul 09 21:25:46 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

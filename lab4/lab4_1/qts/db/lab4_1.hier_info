@@ -1,0 +1,152 @@
+|lab4_1
+clk => clk~0.IN2
+reset => reset~0.IN4
+row[0] <= row_gen:M4.port3
+row[1] <= row_gen:M4.port3
+row[2] <= row_gen:M4.port3
+row[3] <= row_gen:M4.port3
+row[4] <= row_gen:M4.port3
+row[5] <= row_gen:M4.port3
+row[6] <= row_gen:M4.port3
+row[7] <= row_gen:M4.port3
+sel[0] => Equal0.IN0
+sel[0] => Equal1.IN0
+sel[0] => Equal2.IN1
+sel[1] => Equal0.IN1
+sel[1] => Equal1.IN1
+sel[1] => Equal2.IN0
+column_green[0] <= column_green~8.DB_MAX_OUTPUT_PORT_TYPE
+column_green[1] <= column_green~7.DB_MAX_OUTPUT_PORT_TYPE
+column_green[2] <= column_green~6.DB_MAX_OUTPUT_PORT_TYPE
+column_green[3] <= column_green~5.DB_MAX_OUTPUT_PORT_TYPE
+column_green[4] <= column_green~4.DB_MAX_OUTPUT_PORT_TYPE
+column_green[5] <= column_green~3.DB_MAX_OUTPUT_PORT_TYPE
+column_green[6] <= column_green~2.DB_MAX_OUTPUT_PORT_TYPE
+column_green[7] <= column_green~1.DB_MAX_OUTPUT_PORT_TYPE
+column_red[0] <= column_red~8.DB_MAX_OUTPUT_PORT_TYPE
+column_red[1] <= column_red~7.DB_MAX_OUTPUT_PORT_TYPE
+column_red[2] <= column_red~6.DB_MAX_OUTPUT_PORT_TYPE
+column_red[3] <= column_red~5.DB_MAX_OUTPUT_PORT_TYPE
+column_red[4] <= column_red~4.DB_MAX_OUTPUT_PORT_TYPE
+column_red[5] <= column_red~3.DB_MAX_OUTPUT_PORT_TYPE
+column_red[6] <= column_red~2.DB_MAX_OUTPUT_PORT_TYPE
+column_red[7] <= column_red~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab4_1|freq_div:M1
+clk_in => divider[1].CLK
+clk_in => divider[0].CLK
+reset => divider[1].ACLR
+reset => divider[0].ACLR
+clk_out <= divider[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab4_1|freq_div:M2
+clk_in => divider[0].CLK
+reset => divider[0].ACLR
+clk_out <= divider[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab4_1|idx_gen:M3
+clk => idx[6]~reg0.CLK
+clk => idx[5]~reg0.CLK
+clk => idx[4]~reg0.CLK
+clk => idx[3]~reg0.CLK
+clk => idx[2]~reg0.CLK
+clk => idx[1]~reg0.CLK
+clk => idx[0]~reg0.CLK
+reset => idx[6]~reg0.ACLR
+reset => idx[5]~reg0.ACLR
+reset => idx[4]~reg0.ACLR
+reset => idx[3]~reg0.ACLR
+reset => idx[2]~reg0.ACLR
+reset => idx[1]~reg0.ACLR
+reset => idx[0]~reg0.ACLR
+idx[0] <= idx[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+idx[1] <= idx[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+idx[2] <= idx[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+idx[3] <= idx[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+idx[4] <= idx[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+idx[5] <= idx[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+idx[6] <= idx[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab4_1|row_gen:M4
+clk => row[7]~reg0.CLK
+clk => row[6]~reg0.CLK
+clk => row[5]~reg0.CLK
+clk => row[4]~reg0.CLK
+clk => row[3]~reg0.CLK
+clk => row[2]~reg0.CLK
+clk => row[1]~reg0.CLK
+clk => row[0]~reg0.CLK
+clk => cnt[2].CLK
+clk => cnt[1].CLK
+clk => cnt[0].CLK
+clk => idx_cnt[6]~reg0.CLK
+clk => idx_cnt[5]~reg0.CLK
+clk => idx_cnt[4]~reg0.CLK
+clk => idx_cnt[3]~reg0.CLK
+clk => idx_cnt[2]~reg0.CLK
+clk => idx_cnt[1]~reg0.CLK
+clk => idx_cnt[0]~reg0.CLK
+reset => row[7]~reg0.PRESET
+reset => row[6]~reg0.ACLR
+reset => row[5]~reg0.ACLR
+reset => row[4]~reg0.ACLR
+reset => row[3]~reg0.ACLR
+reset => row[2]~reg0.ACLR
+reset => row[1]~reg0.ACLR
+reset => row[0]~reg0.ACLR
+reset => cnt[2].ACLR
+reset => cnt[1].ACLR
+reset => cnt[0].ACLR
+reset => idx_cnt[6]~reg0.ACLR
+reset => idx_cnt[5]~reg0.ACLR
+reset => idx_cnt[4]~reg0.ACLR
+reset => idx_cnt[3]~reg0.ACLR
+reset => idx_cnt[2]~reg0.ACLR
+reset => idx_cnt[1]~reg0.ACLR
+reset => idx_cnt[0]~reg0.ACLR
+idx[0] => Add1.IN14
+idx[1] => Add1.IN13
+idx[2] => Add1.IN12
+idx[3] => Add1.IN11
+idx[4] => Add1.IN10
+idx[5] => Add1.IN9
+idx[6] => Add1.IN8
+row[0] <= row[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[1] <= row[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[2] <= row[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[3] <= row[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[4] <= row[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[5] <= row[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[6] <= row[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[7] <= row[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+idx_cnt[0] <= idx_cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+idx_cnt[1] <= idx_cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+idx_cnt[2] <= idx_cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+idx_cnt[3] <= idx_cnt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+idx_cnt[4] <= idx_cnt[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+idx_cnt[5] <= idx_cnt[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+idx_cnt[6] <= idx_cnt[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab4_1|rom_char:M5
+addr[0] => Decoder0.IN6
+addr[1] => Decoder0.IN5
+addr[2] => Decoder0.IN4
+addr[3] => Decoder0.IN3
+addr[4] => Decoder0.IN2
+addr[5] => Decoder0.IN1
+addr[6] => Decoder0.IN0
+data[0] <= <GND>
+data[1] <= data[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+data[2] <= data[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+data[3] <= data[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+data[4] <= data[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+data[5] <= data[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+data[6] <= data[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+data[7] <= <GND>
+
+
