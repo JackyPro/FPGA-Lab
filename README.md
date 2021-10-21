@@ -1,7 +1,7 @@
 # FPGA-Lab 
 Tool
 - Simulator: Modelsim
-- FPGA: Altera FLEX10KA F
+- FPGA: Altera FLEX10KA Family 
 - Quartus 9.0
 
 |Lab|Detail|Document|
