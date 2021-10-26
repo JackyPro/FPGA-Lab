@@ -1,0 +1,632 @@
+Classic Timing Analyzer report for lab8
+Thu Nov 12 11:02:44 2020
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                             ;
++------------------------------+-------+---------------+----------------------------------+---------------+--------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From          ; To                 ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+---------------+--------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 8.900 ns                         ; column[1]     ; vaild:M3|gg[0]     ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 28.900 ns                        ; idx:M8|row[2] ; red[5]             ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 0.700 ns                         ; column[1]     ; vaild:M3|gg[0]     ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 42.37 MHz ( period = 23.600 ns ) ; idx:M8|row[2] ; collision:M10|coll ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;               ;                    ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+---------------+--------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EPF10K30ATC144-3   ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                                                                                                                                                                        ;
++-----------------------------------------+-----------------------------------------------------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                                                                  ; To                                                                                    ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 42.37 MHz ( period = 23.600 ns )                    ; idx:M8|row[2]                                                                         ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 21.500 ns               ;
+; N/A                                     ; 42.55 MHz ( period = 23.500 ns )                    ; idx:M8|row[6]                                                                         ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 21.400 ns               ;
+; N/A                                     ; 42.55 MHz ( period = 23.500 ns )                    ; move:M5|shift:S2|out[5]                                                               ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 21.400 ns               ;
+; N/A                                     ; 42.55 MHz ( period = 23.500 ns )                    ; move:M5|shift:S2|out[0]                                                               ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 21.400 ns               ;
+; N/A                                     ; 42.55 MHz ( period = 23.500 ns )                    ; move:M5|shift:S2|out[2]                                                               ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 21.400 ns               ;
+; N/A                                     ; 42.74 MHz ( period = 23.400 ns )                    ; move:M5|shift:S2|out[6]                                                               ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 21.300 ns               ;
+; N/A                                     ; 43.29 MHz ( period = 23.100 ns )                    ; idx:M8|idx[0]                                                                         ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 21.000 ns               ;
+; N/A                                     ; 45.05 MHz ( period = 22.200 ns )                    ; idx:M8|row[1]                                                                         ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 20.100 ns               ;
+; N/A                                     ; 45.05 MHz ( period = 22.200 ns )                    ; idx:M8|row[3]                                                                         ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 20.100 ns               ;
+; N/A                                     ; 45.05 MHz ( period = 22.200 ns )                    ; idx:M8|row[4]                                                                         ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 20.100 ns               ;
+; N/A                                     ; 45.05 MHz ( period = 22.200 ns )                    ; move:M5|shift:S2|out[1]                                                               ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 20.100 ns               ;
+; N/A                                     ; 45.25 MHz ( period = 22.100 ns )                    ; idx:M8|row[0]                                                                         ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 20.000 ns               ;
+; N/A                                     ; 45.25 MHz ( period = 22.100 ns )                    ; idx:M8|row[7]                                                                         ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 20.000 ns               ;
+; N/A                                     ; 45.25 MHz ( period = 22.100 ns )                    ; move:M5|shift:S2|out[7]                                                               ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 20.000 ns               ;
+; N/A                                     ; 45.25 MHz ( period = 22.100 ns )                    ; move:M5|shift:S2|out[4]                                                               ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 20.000 ns               ;
+; N/A                                     ; 45.25 MHz ( period = 22.100 ns )                    ; move:M5|shift:S2|out[3]                                                               ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 20.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; idx:M8|row[5]                                                                         ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 19.900 ns               ;
+; N/A                                     ; 45.87 MHz ( period = 21.800 ns )                    ; collision:M10|coll                                                                    ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 19.700 ns               ;
+; N/A                                     ; 50.00 MHz ( period = 20.000 ns )                    ; move:M5|shift:S1|out[6]                                                               ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 17.900 ns               ;
+; N/A                                     ; 50.76 MHz ( period = 19.700 ns )                    ; move:M5|shift:S1|out[3]                                                               ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 17.600 ns               ;
+; N/A                                     ; 50.76 MHz ( period = 19.700 ns )                    ; idx:M8|idx[1]                                                                         ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 17.600 ns               ;
+; N/A                                     ; 50.76 MHz ( period = 19.700 ns )                    ; idx:M8|idx[2]                                                                         ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 17.600 ns               ;
+; N/A                                     ; 51.02 MHz ( period = 19.600 ns )                    ; move:M5|shift:S1|out[4]                                                               ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 17.500 ns               ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; move:M5|shift:S1|out[0]                                                               ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 15.300 ns               ;
+; N/A                                     ; 59.17 MHz ( period = 16.900 ns )                    ; move:M5|shift:S1|out[1]                                                               ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 14.800 ns               ;
+; N/A                                     ; 62.11 MHz ( period = 16.100 ns )                    ; move:M5|shift:S1|out[7]                                                               ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 14.000 ns               ;
+; N/A                                     ; 68.97 MHz ( period = 14.500 ns )                    ; move:M5|shift:S1|out[2]                                                               ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 12.400 ns               ;
+; N/A                                     ; 69.44 MHz ( period = 14.400 ns )                    ; move:M5|shift:S1|out[5]                                                               ; collision:M10|coll                                                                    ; clk        ; clk      ; None                        ; None                      ; 12.300 ns               ;
+; N/A                                     ; 76.34 MHz ( period = 13.100 ns )                    ; key_buff:M2|key_code[1]                                                               ; move:M5|shift:S1|out[0]                                                               ; clk        ; clk      ; None                        ; None                      ; 11.000 ns               ;
+; N/A                                     ; 76.34 MHz ( period = 13.100 ns )                    ; key_buff:M2|key_code[1]                                                               ; move:M5|shift:S1|out[1]                                                               ; clk        ; clk      ; None                        ; None                      ; 11.000 ns               ;
+; N/A                                     ; 76.34 MHz ( period = 13.100 ns )                    ; key_buff:M2|key_code[1]                                                               ; move:M5|shift:S1|out[2]                                                               ; clk        ; clk      ; None                        ; None                      ; 11.000 ns               ;
+; N/A                                     ; 76.34 MHz ( period = 13.100 ns )                    ; key_buff:M2|key_code[1]                                                               ; move:M5|shift:S1|out[3]                                                               ; clk        ; clk      ; None                        ; None                      ; 11.000 ns               ;
+; N/A                                     ; 76.34 MHz ( period = 13.100 ns )                    ; key_buff:M2|key_code[1]                                                               ; move:M5|shift:S1|out[4]                                                               ; clk        ; clk      ; None                        ; None                      ; 11.000 ns               ;
+; N/A                                     ; 76.34 MHz ( period = 13.100 ns )                    ; key_buff:M2|key_code[1]                                                               ; move:M5|shift:S1|out[5]                                                               ; clk        ; clk      ; None                        ; None                      ; 11.000 ns               ;
+; N/A                                     ; 77.52 MHz ( period = 12.900 ns )                    ; key_buff:M2|key_code[1]                                                               ; move:M5|shift:S2|out[1]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.800 ns               ;
+; N/A                                     ; 77.52 MHz ( period = 12.900 ns )                    ; key_buff:M2|key_code[1]                                                               ; move:M5|shift:S2|out[7]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.800 ns               ;
+; N/A                                     ; 77.52 MHz ( period = 12.900 ns )                    ; key_buff:M2|key_code[1]                                                               ; move:M5|shift:S2|out[5]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.800 ns               ;
+; N/A                                     ; 77.52 MHz ( period = 12.900 ns )                    ; key_buff:M2|key_code[1]                                                               ; move:M5|shift:S2|out[0]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.800 ns               ;
+; N/A                                     ; 77.52 MHz ( period = 12.900 ns )                    ; key_buff:M2|key_code[1]                                                               ; move:M5|shift:S2|out[4]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.800 ns               ;
+; N/A                                     ; 77.52 MHz ( period = 12.900 ns )                    ; key_buff:M2|key_code[1]                                                               ; move:M5|shift:S2|out[3]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.800 ns               ;
+; N/A                                     ; 77.52 MHz ( period = 12.900 ns )                    ; key_buff:M2|key_code[1]                                                               ; move:M5|shift:S2|out[2]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.800 ns               ;
+; N/A                                     ; 77.52 MHz ( period = 12.900 ns )                    ; key_buff:M2|key_code[1]                                                               ; move:M5|shift:S2|out[6]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.800 ns               ;
+; N/A                                     ; 78.13 MHz ( period = 12.800 ns )                    ; collision:M10|coll                                                                    ; move:M5|shift:S1|out[0]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.700 ns               ;
+; N/A                                     ; 78.13 MHz ( period = 12.800 ns )                    ; collision:M10|coll                                                                    ; move:M5|shift:S1|out[1]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.700 ns               ;
+; N/A                                     ; 78.13 MHz ( period = 12.800 ns )                    ; collision:M10|coll                                                                    ; move:M5|shift:S1|out[2]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.700 ns               ;
+; N/A                                     ; 78.13 MHz ( period = 12.800 ns )                    ; collision:M10|coll                                                                    ; move:M5|shift:S1|out[3]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.700 ns               ;
+; N/A                                     ; 78.13 MHz ( period = 12.800 ns )                    ; collision:M10|coll                                                                    ; move:M5|shift:S1|out[4]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.700 ns               ;
+; N/A                                     ; 78.13 MHz ( period = 12.800 ns )                    ; collision:M10|coll                                                                    ; move:M5|shift:S1|out[5]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.700 ns               ;
+; N/A                                     ; 78.13 MHz ( period = 12.800 ns )                    ; key_buff:M2|key_code[1]                                                               ; move:M5|shift:S1|out[6]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.700 ns               ;
+; N/A                                     ; 78.13 MHz ( period = 12.800 ns )                    ; key_buff:M2|key_code[1]                                                               ; move:M5|shift:S1|out[7]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.700 ns               ;
+; N/A                                     ; 78.74 MHz ( period = 12.700 ns )                    ; collision:M10|coll                                                                    ; move:M5|shift:S2|out[1]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.600 ns               ;
+; N/A                                     ; 78.74 MHz ( period = 12.700 ns )                    ; collision:M10|coll                                                                    ; move:M5|shift:S2|out[7]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.600 ns               ;
+; N/A                                     ; 78.74 MHz ( period = 12.700 ns )                    ; collision:M10|coll                                                                    ; move:M5|shift:S2|out[5]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.600 ns               ;
+; N/A                                     ; 78.74 MHz ( period = 12.700 ns )                    ; collision:M10|coll                                                                    ; move:M5|shift:S2|out[0]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.600 ns               ;
+; N/A                                     ; 78.74 MHz ( period = 12.700 ns )                    ; collision:M10|coll                                                                    ; move:M5|shift:S2|out[4]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.600 ns               ;
+; N/A                                     ; 78.74 MHz ( period = 12.700 ns )                    ; collision:M10|coll                                                                    ; move:M5|shift:S2|out[3]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.600 ns               ;
+; N/A                                     ; 78.74 MHz ( period = 12.700 ns )                    ; collision:M10|coll                                                                    ; move:M5|shift:S2|out[2]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.600 ns               ;
+; N/A                                     ; 78.74 MHz ( period = 12.700 ns )                    ; collision:M10|coll                                                                    ; move:M5|shift:S2|out[6]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.600 ns               ;
+; N/A                                     ; 80.00 MHz ( period = 12.500 ns )                    ; collision:M10|coll                                                                    ; move:M5|shift:S1|out[6]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.400 ns               ;
+; N/A                                     ; 80.00 MHz ( period = 12.500 ns )                    ; collision:M10|coll                                                                    ; move:M5|shift:S1|out[7]                                                               ; clk        ; clk      ; None                        ; None                      ; 10.400 ns               ;
+; N/A                                     ; 86.96 MHz ( period = 11.500 ns )                    ; key_buff:M2|key_code[2]                                                               ; move:M5|shift:S1|out[0]                                                               ; clk        ; clk      ; None                        ; None                      ; 9.400 ns                ;
+; N/A                                     ; 86.96 MHz ( period = 11.500 ns )                    ; key_buff:M2|key_code[2]                                                               ; move:M5|shift:S1|out[1]                                                               ; clk        ; clk      ; None                        ; None                      ; 9.400 ns                ;
+; N/A                                     ; 86.96 MHz ( period = 11.500 ns )                    ; key_buff:M2|key_code[2]                                                               ; move:M5|shift:S1|out[2]                                                               ; clk        ; clk      ; None                        ; None                      ; 9.400 ns                ;
+; N/A                                     ; 86.96 MHz ( period = 11.500 ns )                    ; key_buff:M2|key_code[2]                                                               ; move:M5|shift:S1|out[3]                                                               ; clk        ; clk      ; None                        ; None                      ; 9.400 ns                ;
+; N/A                                     ; 86.96 MHz ( period = 11.500 ns )                    ; key_buff:M2|key_code[2]                                                               ; move:M5|shift:S1|out[4]                                                               ; clk        ; clk      ; None                        ; None                      ; 9.400 ns                ;
+; N/A                                     ; 86.96 MHz ( period = 11.500 ns )                    ; key_buff:M2|key_code[2]                                                               ; move:M5|shift:S1|out[5]                                                               ; clk        ; clk      ; None                        ; None                      ; 9.400 ns                ;
+; N/A                                     ; 88.50 MHz ( period = 11.300 ns )                    ; key_buff:M2|key_code[2]                                                               ; move:M5|shift:S2|out[1]                                                               ; clk        ; clk      ; None                        ; None                      ; 9.200 ns                ;
+; N/A                                     ; 88.50 MHz ( period = 11.300 ns )                    ; key_buff:M2|key_code[2]                                                               ; move:M5|shift:S2|out[7]                                                               ; clk        ; clk      ; None                        ; None                      ; 9.200 ns                ;
+; N/A                                     ; 88.50 MHz ( period = 11.300 ns )                    ; key_buff:M2|key_code[2]                                                               ; move:M5|shift:S2|out[5]                                                               ; clk        ; clk      ; None                        ; None                      ; 9.200 ns                ;
+; N/A                                     ; 88.50 MHz ( period = 11.300 ns )                    ; key_buff:M2|key_code[2]                                                               ; move:M5|shift:S2|out[0]                                                               ; clk        ; clk      ; None                        ; None                      ; 9.200 ns                ;
+; N/A                                     ; 88.50 MHz ( period = 11.300 ns )                    ; key_buff:M2|key_code[2]                                                               ; move:M5|shift:S2|out[4]                                                               ; clk        ; clk      ; None                        ; None                      ; 9.200 ns                ;
+; N/A                                     ; 88.50 MHz ( period = 11.300 ns )                    ; key_buff:M2|key_code[2]                                                               ; move:M5|shift:S2|out[3]                                                               ; clk        ; clk      ; None                        ; None                      ; 9.200 ns                ;
+; N/A                                     ; 88.50 MHz ( period = 11.300 ns )                    ; key_buff:M2|key_code[2]                                                               ; move:M5|shift:S2|out[2]                                                               ; clk        ; clk      ; None                        ; None                      ; 9.200 ns                ;
+; N/A                                     ; 88.50 MHz ( period = 11.300 ns )                    ; key_buff:M2|key_code[2]                                                               ; move:M5|shift:S2|out[6]                                                               ; clk        ; clk      ; None                        ; None                      ; 9.200 ns                ;
+; N/A                                     ; 89.29 MHz ( period = 11.200 ns )                    ; key_buff:M2|key_code[2]                                                               ; move:M5|shift:S1|out[6]                                                               ; clk        ; clk      ; None                        ; None                      ; 9.100 ns                ;
+; N/A                                     ; 89.29 MHz ( period = 11.200 ns )                    ; key_buff:M2|key_code[2]                                                               ; move:M5|shift:S1|out[7]                                                               ; clk        ; clk      ; None                        ; None                      ; 9.100 ns                ;
+; N/A                                     ; 98.04 MHz ( period = 10.200 ns )                    ; idx:M8|idx[0]                                                                         ; vaild:M3|gg[0]                                                                        ; clk        ; clk      ; None                        ; None                      ; 8.100 ns                ;
+; N/A                                     ; 99.01 MHz ( period = 10.100 ns )                    ; idx:M8|idx[0]                                                                         ; key_buff:M2|key_code[3]                                                               ; clk        ; clk      ; None                        ; None                      ; 8.000 ns                ;
+; N/A                                     ; 100.00 MHz ( period = 10.000 ns )                   ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13] ; clk        ; clk      ; None                        ; None                      ; 7.900 ns                ;
+; N/A                                     ; 104.17 MHz ( period = 9.600 ns )                    ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13] ; clk        ; clk      ; None                        ; None                      ; 7.500 ns                ;
+; N/A                                     ; 105.26 MHz ( period = 9.500 ns )                    ; key_buff:M2|key_code[3]                                                               ; move:M5|shift:S2|out[1]                                                               ; clk        ; clk      ; None                        ; None                      ; 7.400 ns                ;
+; N/A                                     ; 105.26 MHz ( period = 9.500 ns )                    ; key_buff:M2|key_code[3]                                                               ; move:M5|shift:S2|out[7]                                                               ; clk        ; clk      ; None                        ; None                      ; 7.400 ns                ;
+; N/A                                     ; 105.26 MHz ( period = 9.500 ns )                    ; key_buff:M2|key_code[3]                                                               ; move:M5|shift:S2|out[5]                                                               ; clk        ; clk      ; None                        ; None                      ; 7.400 ns                ;
+; N/A                                     ; 105.26 MHz ( period = 9.500 ns )                    ; key_buff:M2|key_code[3]                                                               ; move:M5|shift:S2|out[0]                                                               ; clk        ; clk      ; None                        ; None                      ; 7.400 ns                ;
+; N/A                                     ; 105.26 MHz ( period = 9.500 ns )                    ; key_buff:M2|key_code[3]                                                               ; move:M5|shift:S2|out[4]                                                               ; clk        ; clk      ; None                        ; None                      ; 7.400 ns                ;
+; N/A                                     ; 105.26 MHz ( period = 9.500 ns )                    ; key_buff:M2|key_code[3]                                                               ; move:M5|shift:S2|out[3]                                                               ; clk        ; clk      ; None                        ; None                      ; 7.400 ns                ;
+; N/A                                     ; 105.26 MHz ( period = 9.500 ns )                    ; key_buff:M2|key_code[3]                                                               ; move:M5|shift:S2|out[2]                                                               ; clk        ; clk      ; None                        ; None                      ; 7.400 ns                ;
+; N/A                                     ; 105.26 MHz ( period = 9.500 ns )                    ; key_buff:M2|key_code[3]                                                               ; move:M5|shift:S2|out[6]                                                               ; clk        ; clk      ; None                        ; None                      ; 7.400 ns                ;
+; N/A                                     ; 108.70 MHz ( period = 9.200 ns )                    ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13] ; clk        ; clk      ; None                        ; None                      ; 7.100 ns                ;
+; N/A                                     ; 109.89 MHz ( period = 9.100 ns )                    ; vaild:M3|gg[5]                                                                        ; key_buff:M2|key_code[1]                                                               ; clk        ; clk      ; None                        ; None                      ; 7.000 ns                ;
+; N/A                                     ; 109.89 MHz ( period = 9.100 ns )                    ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 7.000 ns                ;
+; N/A                                     ; 113.64 MHz ( period = 8.800 ns )                    ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13] ; clk        ; clk      ; None                        ; None                      ; 6.700 ns                ;
+; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 6.600 ns                ;
+; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 6.600 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13] ; clk        ; clk      ; None                        ; None                      ; 6.300 ns                ;
+; N/A                                     ; 120.48 MHz ( period = 8.300 ns )                    ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 6.200 ns                ;
+; N/A                                     ; 120.48 MHz ( period = 8.300 ns )                    ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 6.200 ns                ;
+; N/A                                     ; 120.48 MHz ( period = 8.300 ns )                    ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; clk        ; clk      ; None                        ; None                      ; 6.200 ns                ;
+; N/A                                     ; 121.95 MHz ( period = 8.200 ns )                    ; move:M5|shift:S1|out[0]                                                               ; move:M5|shift:S1|out[7]                                                               ; clk        ; clk      ; None                        ; None                      ; 6.100 ns                ;
+; N/A                                     ; 123.46 MHz ( period = 8.100 ns )                    ; move:M5|shift:S1|out[7]                                                               ; move:M5|shift:S1|out[0]                                                               ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A                                     ; 123.46 MHz ( period = 8.100 ns )                    ; move:M5|shift:S1|out[5]                                                               ; move:M5|shift:S1|out[6]                                                               ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A                                     ; 125.00 MHz ( period = 8.000 ns )                    ; move:M5|shift:S1|out[2]                                                               ; move:M5|shift:S1|out[3]                                                               ; clk        ; clk      ; None                        ; None                      ; 5.900 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S2|out[0]                                                               ; move:M5|shift:S2|out[1]                                                               ; clk        ; clk      ; None                        ; None                      ; 5.800 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; idx:M8|idx[0]                                                                         ; key_buff:M2|key_code[2]                                                               ; clk        ; clk      ; None                        ; None                      ; 5.800 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S2|out[5]                                                               ; move:M5|shift:S2|out[4]                                                               ; clk        ; clk      ; None                        ; None                      ; 5.800 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 5.800 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 5.800 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; clk        ; clk      ; None                        ; None                      ; 5.800 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; clk        ; clk      ; None                        ; None                      ; 5.800 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; count6:M4|count_out[1]                                                                ; key_buff:M2|key_code[2]                                                               ; clk        ; clk      ; None                        ; None                      ; 5.700 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S1|out[6]                                                               ; move:M5|shift:S1|out[5]                                                               ; clk        ; clk      ; None                        ; None                      ; 5.700 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; count6:M4|count_out[2]                                                                ; vaild:M3|gg[0]                                                                        ; clk        ; clk      ; None                        ; None                      ; 5.700 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; count6:M4|count_out[2]                                                                ; key_buff:M2|key_code[3]                                                               ; clk        ; clk      ; None                        ; None                      ; 5.600 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S2|out[4]                                                               ; move:M5|shift:S2|out[5]                                                               ; clk        ; clk      ; None                        ; None                      ; 5.600 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; count6:M4|count_out[1]                                                                ; vaild:M3|gg[0]                                                                        ; clk        ; clk      ; None                        ; None                      ; 5.600 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S2|out[1]                                                               ; move:M5|shift:S2|out[0]                                                               ; clk        ; clk      ; None                        ; None                      ; 5.500 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S1|out[3]                                                               ; move:M5|shift:S1|out[2]                                                               ; clk        ; clk      ; None                        ; None                      ; 5.500 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13] ; clk        ; clk      ; None                        ; None                      ; 5.400 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 5.400 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 5.400 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; clk        ; clk      ; None                        ; None                      ; 5.400 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; clk        ; clk      ; None                        ; None                      ; 5.400 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; clk        ; clk      ; None                        ; None                      ; 5.400 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13] ; clk        ; clk      ; None                        ; None                      ; 5.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 5.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; clk        ; clk      ; None                        ; None                      ; 5.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; clk        ; clk      ; None                        ; None                      ; 5.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; clk        ; clk      ; None                        ; None                      ; 5.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; clk        ; clk      ; None                        ; None                      ; 5.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; idx:M8|idx[0]                                                                         ; idx:M8|idx[1]                                                                         ; clk        ; clk      ; None                        ; None                      ; 4.900 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; idx:M8|idx[0]                                                                         ; idx:M8|idx[2]                                                                         ; clk        ; clk      ; None                        ; None                      ; 4.900 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13] ; clk        ; clk      ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; clk        ; clk      ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; clk        ; clk      ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; clk        ; clk      ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; clk        ; clk      ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; clk        ; clk      ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; vaild:M3|gg[5]                                                                        ; key_buff:M2|key_code[3]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; vaild:M3|gg[5]                                                                        ; key_buff:M2|key_code[2]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13] ; clk        ; clk      ; None                        ; None                      ; 4.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; clk        ; clk      ; None                        ; None                      ; 4.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; clk        ; clk      ; None                        ; None                      ; 4.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; clk        ; clk      ; None                        ; None                      ; 4.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; clk        ; clk      ; None                        ; None                      ; 4.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; clk        ; clk      ; None                        ; None                      ; 4.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; vaild:M3|gg[1]                                                                        ; vaild:M3|gg[2]                                                                        ; clk        ; clk      ; None                        ; None                      ; 4.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S2|out[6]                                                               ; move:M5|shift:S2|out[7]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.100 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; count6:M4|count_out[2]                                                                ; key_buff:M2|key_code[1]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.100 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; count6:M4|count_out[1]                                                                ; key_buff:M2|key_code[1]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.100 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S2|out[7]                                                               ; move:M5|shift:S2|out[0]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.100 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S1|out[0]                                                               ; move:M5|shift:S1|out[1]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.100 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S2|out[2]                                                               ; move:M5|shift:S2|out[3]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.100 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S1|out[1]                                                               ; move:M5|shift:S1|out[2]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.100 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S1|out[5]                                                               ; move:M5|shift:S1|out[4]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.100 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S1|out[4]                                                               ; move:M5|shift:S1|out[5]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.100 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S1|out[6]                                                               ; move:M5|shift:S1|out[7]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.100 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 4.100 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 4.100 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S2|out[1]                                                               ; move:M5|shift:S2|out[2]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.100 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S2|out[5]                                                               ; move:M5|shift:S2|out[6]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.100 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S1|out[1]                                                               ; move:M5|shift:S1|out[0]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S2|out[2]                                                               ; move:M5|shift:S2|out[1]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S2|out[0]                                                               ; move:M5|shift:S2|out[7]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S2|out[6]                                                               ; move:M5|shift:S2|out[5]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S1|out[2]                                                               ; move:M5|shift:S1|out[1]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S2|out[3]                                                               ; move:M5|shift:S2|out[4]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S2|out[4]                                                               ; move:M5|shift:S2|out[3]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S1|out[4]                                                               ; move:M5|shift:S1|out[3]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S1|out[3]                                                               ; move:M5|shift:S1|out[4]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S1|out[7]                                                               ; move:M5|shift:S1|out[6]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S2|out[3]                                                               ; move:M5|shift:S2|out[2]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; move:M5|shift:S2|out[7]                                                               ; move:M5|shift:S2|out[6]                                                               ; clk        ; clk      ; None                        ; None                      ; 4.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13] ; clk        ; clk      ; None                        ; None                      ; 3.800 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; clk        ; clk      ; None                        ; None                      ; 3.800 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; clk        ; clk      ; None                        ; None                      ; 3.800 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; clk        ; clk      ; None                        ; None                      ; 3.800 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; clk        ; clk      ; None                        ; None                      ; 3.800 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 3.700 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 3.700 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; clk        ; clk      ; None                        ; None                      ; 3.700 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13] ; clk        ; clk      ; None                        ; None                      ; 3.400 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; idx:M8|row[4]                                                                         ; idx:M8|row[3]                                                                         ; clk        ; clk      ; None                        ; None                      ; 3.400 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; clk        ; clk      ; None                        ; None                      ; 3.400 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; clk        ; clk      ; None                        ; None                      ; 3.400 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; clk        ; clk      ; None                        ; None                      ; 3.400 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; clk        ; clk      ; None                        ; None                      ; 3.300 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; clk        ; clk      ; None                        ; None                      ; 3.300 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; clk        ; clk      ; None                        ; None                      ; 3.300 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; clk        ; clk      ; None                        ; None                      ; 3.300 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; clk        ; clk      ; None                        ; None                      ; 3.300 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; idx:M8|row[2]                                                                         ; idx:M8|row[1]                                                                         ; clk        ; clk      ; None                        ; None                      ; 3.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; count6:M4|count_out[1]                                                                ; key_buff:M2|key_code[3]                                                               ; clk        ; clk      ; None                        ; None                      ; 3.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; count6:M4|count_out[2]                                                                ; key_buff:M2|key_code[2]                                                               ; clk        ; clk      ; None                        ; None                      ; 3.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13] ; clk        ; clk      ; None                        ; None                      ; 3.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; clk        ; clk      ; None                        ; None                      ; 3.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; clk        ; clk      ; None                        ; None                      ; 3.000 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; clk        ; clk      ; None                        ; None                      ; 2.900 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; clk        ; clk      ; None                        ; None                      ; 2.900 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]  ; freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]  ; clk        ; clk      ; None                        ; None                      ; 2.900 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                                                                       ;                                                                                       ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------+
+; tsu                                                                                ;
++-------+--------------+------------+-----------+-------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From      ; To                      ; To Clock ;
++-------+--------------+------------+-----------+-------------------------+----------+
+; N/A   ; None         ; 8.900 ns   ; column[0] ; vaild:M3|gg[0]          ; clk      ;
+; N/A   ; None         ; 8.900 ns   ; column[1] ; vaild:M3|gg[0]          ; clk      ;
+; N/A   ; None         ; 8.800 ns   ; column[0] ; key_buff:M2|key_code[3] ; clk      ;
+; N/A   ; None         ; 8.800 ns   ; column[1] ; key_buff:M2|key_code[3] ; clk      ;
+; N/A   ; None         ; 6.500 ns   ; column[2] ; key_buff:M2|key_code[2] ; clk      ;
+; N/A   ; None         ; 6.500 ns   ; column[2] ; vaild:M3|gg[0]          ; clk      ;
+; N/A   ; None         ; 6.500 ns   ; column[0] ; key_buff:M2|key_code[2] ; clk      ;
+; N/A   ; None         ; 6.400 ns   ; column[2] ; key_buff:M2|key_code[3] ; clk      ;
+; N/A   ; None         ; 5.000 ns   ; column[2] ; key_buff:M2|key_code[1] ; clk      ;
+; N/A   ; None         ; 2.400 ns   ; column[0] ; key_buff:M2|key_code[1] ; clk      ;
+; N/A   ; None         ; 2.400 ns   ; column[1] ; key_buff:M2|key_code[1] ; clk      ;
+; N/A   ; None         ; 2.400 ns   ; column[1] ; key_buff:M2|key_code[2] ; clk      ;
++-------+--------------+------------+-----------+-------------------------+----------+
+
+
++-------------------------------------------------------------------------------------+
+; tco                                                                                 ;
++-------+--------------+------------+-------------------------+----------+------------+
+; Slack ; Required tco ; Actual tco ; From                    ; To       ; From Clock ;
++-------+--------------+------------+-------------------------+----------+------------+
+; N/A   ; None         ; 28.900 ns  ; idx:M8|row[2]           ; red[5]   ; clk        ;
+; N/A   ; None         ; 28.800 ns  ; idx:M8|row[2]           ; red[7]   ; clk        ;
+; N/A   ; None         ; 28.800 ns  ; idx:M8|row[6]           ; red[5]   ; clk        ;
+; N/A   ; None         ; 28.800 ns  ; move:M5|shift:S2|out[2] ; red[5]   ; clk        ;
+; N/A   ; None         ; 28.700 ns  ; idx:M8|row[6]           ; red[7]   ; clk        ;
+; N/A   ; None         ; 28.700 ns  ; move:M5|shift:S2|out[2] ; red[7]   ; clk        ;
+; N/A   ; None         ; 28.700 ns  ; move:M5|shift:S2|out[6] ; red[5]   ; clk        ;
+; N/A   ; None         ; 28.600 ns  ; move:M5|shift:S2|out[6] ; red[7]   ; clk        ;
+; N/A   ; None         ; 28.200 ns  ; idx:M8|row[2]           ; red[2]   ; clk        ;
+; N/A   ; None         ; 28.200 ns  ; idx:M8|row[2]           ; red[1]   ; clk        ;
+; N/A   ; None         ; 28.100 ns  ; idx:M8|row[6]           ; red[2]   ; clk        ;
+; N/A   ; None         ; 28.100 ns  ; move:M5|shift:S2|out[2] ; red[2]   ; clk        ;
+; N/A   ; None         ; 28.100 ns  ; idx:M8|row[6]           ; red[1]   ; clk        ;
+; N/A   ; None         ; 28.100 ns  ; move:M5|shift:S2|out[2] ; red[1]   ; clk        ;
+; N/A   ; None         ; 28.000 ns  ; move:M5|shift:S2|out[6] ; red[2]   ; clk        ;
+; N/A   ; None         ; 28.000 ns  ; move:M5|shift:S2|out[6] ; red[1]   ; clk        ;
+; N/A   ; None         ; 27.700 ns  ; move:M5|shift:S2|out[5] ; red[5]   ; clk        ;
+; N/A   ; None         ; 27.700 ns  ; move:M5|shift:S2|out[0] ; red[5]   ; clk        ;
+; N/A   ; None         ; 27.600 ns  ; move:M5|shift:S2|out[5] ; red[7]   ; clk        ;
+; N/A   ; None         ; 27.600 ns  ; move:M5|shift:S2|out[0] ; red[7]   ; clk        ;
+; N/A   ; None         ; 27.600 ns  ; idx:M8|row[2]           ; red[4]   ; clk        ;
+; N/A   ; None         ; 27.600 ns  ; idx:M8|row[2]           ; red[3]   ; clk        ;
+; N/A   ; None         ; 27.500 ns  ; idx:M8|row[2]           ; red[6]   ; clk        ;
+; N/A   ; None         ; 27.500 ns  ; idx:M8|row[1]           ; red[5]   ; clk        ;
+; N/A   ; None         ; 27.500 ns  ; idx:M8|row[3]           ; red[5]   ; clk        ;
+; N/A   ; None         ; 27.500 ns  ; idx:M8|row[4]           ; red[5]   ; clk        ;
+; N/A   ; None         ; 27.500 ns  ; move:M5|shift:S2|out[1] ; red[5]   ; clk        ;
+; N/A   ; None         ; 27.500 ns  ; idx:M8|row[6]           ; red[4]   ; clk        ;
+; N/A   ; None         ; 27.500 ns  ; move:M5|shift:S2|out[5] ; red[4]   ; clk        ;
+; N/A   ; None         ; 27.500 ns  ; move:M5|shift:S2|out[0] ; red[4]   ; clk        ;
+; N/A   ; None         ; 27.500 ns  ; move:M5|shift:S2|out[2] ; red[4]   ; clk        ;
+; N/A   ; None         ; 27.500 ns  ; idx:M8|row[6]           ; red[3]   ; clk        ;
+; N/A   ; None         ; 27.500 ns  ; move:M5|shift:S2|out[5] ; red[3]   ; clk        ;
+; N/A   ; None         ; 27.500 ns  ; move:M5|shift:S2|out[0] ; red[3]   ; clk        ;
+; N/A   ; None         ; 27.500 ns  ; move:M5|shift:S2|out[2] ; red[3]   ; clk        ;
+; N/A   ; None         ; 27.400 ns  ; idx:M8|row[1]           ; red[7]   ; clk        ;
+; N/A   ; None         ; 27.400 ns  ; idx:M8|row[3]           ; red[7]   ; clk        ;
+; N/A   ; None         ; 27.400 ns  ; idx:M8|row[4]           ; red[7]   ; clk        ;
+; N/A   ; None         ; 27.400 ns  ; move:M5|shift:S2|out[1] ; red[7]   ; clk        ;
+; N/A   ; None         ; 27.400 ns  ; idx:M8|row[6]           ; red[6]   ; clk        ;
+; N/A   ; None         ; 27.400 ns  ; move:M5|shift:S2|out[5] ; red[6]   ; clk        ;
+; N/A   ; None         ; 27.400 ns  ; move:M5|shift:S2|out[0] ; red[6]   ; clk        ;
+; N/A   ; None         ; 27.400 ns  ; move:M5|shift:S2|out[2] ; red[6]   ; clk        ;
+; N/A   ; None         ; 27.400 ns  ; idx:M8|row[7]           ; red[5]   ; clk        ;
+; N/A   ; None         ; 27.400 ns  ; move:M5|shift:S2|out[7] ; red[5]   ; clk        ;
+; N/A   ; None         ; 27.400 ns  ; move:M5|shift:S2|out[4] ; red[5]   ; clk        ;
+; N/A   ; None         ; 27.400 ns  ; move:M5|shift:S2|out[3] ; red[5]   ; clk        ;
+; N/A   ; None         ; 27.400 ns  ; move:M5|shift:S2|out[6] ; red[4]   ; clk        ;
+; N/A   ; None         ; 27.400 ns  ; move:M5|shift:S2|out[6] ; red[3]   ; clk        ;
+; N/A   ; None         ; 27.300 ns  ; idx:M8|row[7]           ; red[7]   ; clk        ;
+; N/A   ; None         ; 27.300 ns  ; move:M5|shift:S2|out[7] ; red[7]   ; clk        ;
+; N/A   ; None         ; 27.300 ns  ; move:M5|shift:S2|out[4] ; red[7]   ; clk        ;
+; N/A   ; None         ; 27.300 ns  ; move:M5|shift:S2|out[3] ; red[7]   ; clk        ;
+; N/A   ; None         ; 27.300 ns  ; move:M5|shift:S2|out[6] ; red[6]   ; clk        ;
+; N/A   ; None         ; 27.000 ns  ; move:M5|shift:S2|out[5] ; red[2]   ; clk        ;
+; N/A   ; None         ; 27.000 ns  ; move:M5|shift:S2|out[0] ; red[2]   ; clk        ;
+; N/A   ; None         ; 27.000 ns  ; move:M5|shift:S2|out[5] ; red[1]   ; clk        ;
+; N/A   ; None         ; 27.000 ns  ; move:M5|shift:S2|out[0] ; red[1]   ; clk        ;
+; N/A   ; None         ; 26.800 ns  ; idx:M8|row[1]           ; red[2]   ; clk        ;
+; N/A   ; None         ; 26.800 ns  ; idx:M8|row[3]           ; red[2]   ; clk        ;
+; N/A   ; None         ; 26.800 ns  ; idx:M8|row[4]           ; red[2]   ; clk        ;
+; N/A   ; None         ; 26.800 ns  ; move:M5|shift:S2|out[1] ; red[2]   ; clk        ;
+; N/A   ; None         ; 26.800 ns  ; idx:M8|row[1]           ; red[1]   ; clk        ;
+; N/A   ; None         ; 26.800 ns  ; idx:M8|row[3]           ; red[1]   ; clk        ;
+; N/A   ; None         ; 26.800 ns  ; idx:M8|row[4]           ; red[1]   ; clk        ;
+; N/A   ; None         ; 26.800 ns  ; move:M5|shift:S2|out[1] ; red[1]   ; clk        ;
+; N/A   ; None         ; 26.800 ns  ; idx:M8|row[2]           ; red[0]   ; clk        ;
+; N/A   ; None         ; 26.700 ns  ; idx:M8|row[7]           ; red[2]   ; clk        ;
+; N/A   ; None         ; 26.700 ns  ; move:M5|shift:S2|out[7] ; red[2]   ; clk        ;
+; N/A   ; None         ; 26.700 ns  ; move:M5|shift:S2|out[4] ; red[2]   ; clk        ;
+; N/A   ; None         ; 26.700 ns  ; move:M5|shift:S2|out[3] ; red[2]   ; clk        ;
+; N/A   ; None         ; 26.700 ns  ; idx:M8|row[7]           ; red[1]   ; clk        ;
+; N/A   ; None         ; 26.700 ns  ; move:M5|shift:S2|out[7] ; red[1]   ; clk        ;
+; N/A   ; None         ; 26.700 ns  ; move:M5|shift:S2|out[4] ; red[1]   ; clk        ;
+; N/A   ; None         ; 26.700 ns  ; move:M5|shift:S2|out[3] ; red[1]   ; clk        ;
+; N/A   ; None         ; 26.700 ns  ; idx:M8|row[6]           ; red[0]   ; clk        ;
+; N/A   ; None         ; 26.700 ns  ; move:M5|shift:S2|out[5] ; red[0]   ; clk        ;
+; N/A   ; None         ; 26.700 ns  ; move:M5|shift:S2|out[0] ; red[0]   ; clk        ;
+; N/A   ; None         ; 26.700 ns  ; move:M5|shift:S2|out[2] ; red[0]   ; clk        ;
+; N/A   ; None         ; 26.600 ns  ; move:M5|shift:S2|out[6] ; red[0]   ; clk        ;
+; N/A   ; None         ; 26.300 ns  ; idx:M8|row[0]           ; red[5]   ; clk        ;
+; N/A   ; None         ; 26.200 ns  ; idx:M8|row[0]           ; red[7]   ; clk        ;
+; N/A   ; None         ; 26.200 ns  ; idx:M8|row[5]           ; red[5]   ; clk        ;
+; N/A   ; None         ; 26.200 ns  ; idx:M8|row[1]           ; red[4]   ; clk        ;
+; N/A   ; None         ; 26.200 ns  ; idx:M8|row[3]           ; red[4]   ; clk        ;
+; N/A   ; None         ; 26.200 ns  ; idx:M8|row[4]           ; red[4]   ; clk        ;
+; N/A   ; None         ; 26.200 ns  ; move:M5|shift:S2|out[1] ; red[4]   ; clk        ;
+; N/A   ; None         ; 26.200 ns  ; idx:M8|row[1]           ; red[3]   ; clk        ;
+; N/A   ; None         ; 26.200 ns  ; idx:M8|row[3]           ; red[3]   ; clk        ;
+; N/A   ; None         ; 26.200 ns  ; idx:M8|row[4]           ; red[3]   ; clk        ;
+; N/A   ; None         ; 26.200 ns  ; move:M5|shift:S2|out[1] ; red[3]   ; clk        ;
+; N/A   ; None         ; 26.100 ns  ; idx:M8|row[5]           ; red[7]   ; clk        ;
+; N/A   ; None         ; 26.100 ns  ; idx:M8|row[1]           ; red[6]   ; clk        ;
+; N/A   ; None         ; 26.100 ns  ; idx:M8|row[3]           ; red[6]   ; clk        ;
+; N/A   ; None         ; 26.100 ns  ; idx:M8|row[4]           ; red[6]   ; clk        ;
+; N/A   ; None         ; 26.100 ns  ; move:M5|shift:S2|out[1] ; red[6]   ; clk        ;
+; N/A   ; None         ; 26.100 ns  ; idx:M8|row[0]           ; red[4]   ; clk        ;
+; N/A   ; None         ; 26.100 ns  ; idx:M8|row[7]           ; red[4]   ; clk        ;
+; N/A   ; None         ; 26.100 ns  ; move:M5|shift:S2|out[7] ; red[4]   ; clk        ;
+; N/A   ; None         ; 26.100 ns  ; move:M5|shift:S2|out[4] ; red[4]   ; clk        ;
+; N/A   ; None         ; 26.100 ns  ; move:M5|shift:S2|out[3] ; red[4]   ; clk        ;
+; N/A   ; None         ; 26.100 ns  ; idx:M8|row[0]           ; red[3]   ; clk        ;
+; N/A   ; None         ; 26.100 ns  ; idx:M8|row[7]           ; red[3]   ; clk        ;
+; N/A   ; None         ; 26.100 ns  ; move:M5|shift:S2|out[7] ; red[3]   ; clk        ;
+; N/A   ; None         ; 26.100 ns  ; move:M5|shift:S2|out[4] ; red[3]   ; clk        ;
+; N/A   ; None         ; 26.100 ns  ; move:M5|shift:S2|out[3] ; red[3]   ; clk        ;
+; N/A   ; None         ; 26.000 ns  ; idx:M8|row[0]           ; red[6]   ; clk        ;
+; N/A   ; None         ; 26.000 ns  ; idx:M8|row[7]           ; red[6]   ; clk        ;
+; N/A   ; None         ; 26.000 ns  ; move:M5|shift:S2|out[7] ; red[6]   ; clk        ;
+; N/A   ; None         ; 26.000 ns  ; move:M5|shift:S2|out[4] ; red[6]   ; clk        ;
+; N/A   ; None         ; 26.000 ns  ; move:M5|shift:S2|out[3] ; red[6]   ; clk        ;
+; N/A   ; None         ; 26.000 ns  ; idx:M8|row[5]           ; red[4]   ; clk        ;
+; N/A   ; None         ; 26.000 ns  ; idx:M8|row[5]           ; red[3]   ; clk        ;
+; N/A   ; None         ; 25.900 ns  ; idx:M8|idx[0]           ; green[7] ; clk        ;
+; N/A   ; None         ; 25.900 ns  ; idx:M8|row[5]           ; red[6]   ; clk        ;
+; N/A   ; None         ; 25.600 ns  ; idx:M8|row[0]           ; red[2]   ; clk        ;
+; N/A   ; None         ; 25.600 ns  ; idx:M8|row[0]           ; red[1]   ; clk        ;
+; N/A   ; None         ; 25.500 ns  ; idx:M8|row[5]           ; red[2]   ; clk        ;
+; N/A   ; None         ; 25.500 ns  ; idx:M8|row[5]           ; red[1]   ; clk        ;
+; N/A   ; None         ; 25.400 ns  ; idx:M8|row[3]           ; red[0]   ; clk        ;
+; N/A   ; None         ; 25.400 ns  ; idx:M8|row[4]           ; red[0]   ; clk        ;
+; N/A   ; None         ; 25.300 ns  ; idx:M8|row[0]           ; red[0]   ; clk        ;
+; N/A   ; None         ; 25.300 ns  ; idx:M8|row[1]           ; red[0]   ; clk        ;
+; N/A   ; None         ; 25.300 ns  ; move:M5|shift:S2|out[1] ; red[0]   ; clk        ;
+; N/A   ; None         ; 25.300 ns  ; move:M5|shift:S2|out[4] ; red[0]   ; clk        ;
+; N/A   ; None         ; 25.300 ns  ; move:M5|shift:S2|out[3] ; red[0]   ; clk        ;
+; N/A   ; None         ; 25.200 ns  ; idx:M8|row[5]           ; red[0]   ; clk        ;
+; N/A   ; None         ; 25.200 ns  ; idx:M8|row[7]           ; red[0]   ; clk        ;
+; N/A   ; None         ; 25.200 ns  ; move:M5|shift:S2|out[7] ; red[0]   ; clk        ;
+; N/A   ; None         ; 24.800 ns  ; idx:M8|idx[0]           ; green[4] ; clk        ;
+; N/A   ; None         ; 24.800 ns  ; idx:M8|idx[0]           ; green[3] ; clk        ;
+; N/A   ; None         ; 24.800 ns  ; idx:M8|idx[0]           ; green[2] ; clk        ;
+; N/A   ; None         ; 24.700 ns  ; idx:M8|idx[0]           ; green[0] ; clk        ;
+; N/A   ; None         ; 24.500 ns  ; idx:M8|idx[1]           ; green[7] ; clk        ;
+; N/A   ; None         ; 24.500 ns  ; idx:M8|idx[0]           ; green[5] ; clk        ;
+; N/A   ; None         ; 24.400 ns  ; collision:M10|coll      ; green[7] ; clk        ;
+; N/A   ; None         ; 24.400 ns  ; idx:M8|idx[2]           ; green[7] ; clk        ;
+; N/A   ; None         ; 23.900 ns  ; move:M5|shift:S1|out[6] ; red[6]   ; clk        ;
+; N/A   ; None         ; 23.800 ns  ; collision:M10|coll      ; green[1] ; clk        ;
+; N/A   ; None         ; 23.800 ns  ; collision:M10|coll      ; green[0] ; clk        ;
+; N/A   ; None         ; 23.800 ns  ; move:M5|shift:S1|out[7] ; red[7]   ; clk        ;
+; N/A   ; None         ; 23.700 ns  ; move:M5|shift:S1|out[3] ; red[3]   ; clk        ;
+; N/A   ; None         ; 23.600 ns  ; move:M5|shift:S1|out[5] ; red[5]   ; clk        ;
+; N/A   ; None         ; 23.600 ns  ; move:M5|shift:S1|out[4] ; red[4]   ; clk        ;
+; N/A   ; None         ; 23.500 ns  ; collision:M10|coll      ; green[4] ; clk        ;
+; N/A   ; None         ; 23.500 ns  ; collision:M10|coll      ; green[3] ; clk        ;
+; N/A   ; None         ; 23.500 ns  ; collision:M10|coll      ; green[2] ; clk        ;
+; N/A   ; None         ; 23.400 ns  ; collision:M10|coll      ; green[6] ; clk        ;
+; N/A   ; None         ; 23.400 ns  ; collision:M10|coll      ; green[5] ; clk        ;
+; N/A   ; None         ; 23.400 ns  ; idx:M8|idx[2]           ; green[1] ; clk        ;
+; N/A   ; None         ; 23.400 ns  ; idx:M8|idx[2]           ; green[0] ; clk        ;
+; N/A   ; None         ; 23.300 ns  ; idx:M8|idx[2]           ; green[2] ; clk        ;
+; N/A   ; None         ; 23.300 ns  ; idx:M8|idx[1]           ; green[1] ; clk        ;
+; N/A   ; None         ; 23.300 ns  ; idx:M8|idx[1]           ; green[0] ; clk        ;
+; N/A   ; None         ; 23.200 ns  ; idx:M8|idx[1]           ; green[2] ; clk        ;
+; N/A   ; None         ; 23.100 ns  ; move:M5|shift:S1|out[0] ; red[0]   ; clk        ;
+; N/A   ; None         ; 23.000 ns  ; idx:M8|idx[1]           ; green[6] ; clk        ;
+; N/A   ; None         ; 23.000 ns  ; idx:M8|idx[2]           ; green[6] ; clk        ;
+; N/A   ; None         ; 23.000 ns  ; idx:M8|idx[1]           ; green[5] ; clk        ;
+; N/A   ; None         ; 23.000 ns  ; idx:M8|idx[2]           ; green[5] ; clk        ;
+; N/A   ; None         ; 23.000 ns  ; move:M5|shift:S1|out[2] ; red[2]   ; clk        ;
+; N/A   ; None         ; 22.900 ns  ; move:M5|shift:S1|out[1] ; red[1]   ; clk        ;
+; N/A   ; None         ; 21.400 ns  ; idx:M8|idx[1]           ; green[4] ; clk        ;
+; N/A   ; None         ; 21.400 ns  ; idx:M8|idx[2]           ; green[4] ; clk        ;
+; N/A   ; None         ; 21.400 ns  ; idx:M8|idx[1]           ; green[3] ; clk        ;
+; N/A   ; None         ; 21.400 ns  ; idx:M8|idx[2]           ; green[3] ; clk        ;
+; N/A   ; None         ; 19.800 ns  ; idx:M8|row[2]           ; row[2]   ; clk        ;
+; N/A   ; None         ; 19.700 ns  ; idx:M8|row[3]           ; row[3]   ; clk        ;
+; N/A   ; None         ; 19.600 ns  ; idx:M8|row[1]           ; row[1]   ; clk        ;
+; N/A   ; None         ; 19.600 ns  ; idx:M8|row[0]           ; row[0]   ; clk        ;
+; N/A   ; None         ; 19.500 ns  ; idx:M8|row[7]           ; row[7]   ; clk        ;
+; N/A   ; None         ; 19.500 ns  ; idx:M8|row[6]           ; row[6]   ; clk        ;
+; N/A   ; None         ; 19.500 ns  ; idx:M8|row[5]           ; row[5]   ; clk        ;
+; N/A   ; None         ; 19.500 ns  ; idx:M8|row[4]           ; row[4]   ; clk        ;
+; N/A   ; None         ; 19.200 ns  ; idx:M8|idx[0]           ; sel[0]   ; clk        ;
+; N/A   ; None         ; 18.600 ns  ; count6:M4|count_out[2]  ; sel[2]   ; clk        ;
+; N/A   ; None         ; 18.600 ns  ; count6:M4|count_out[1]  ; sel[1]   ; clk        ;
++-------+--------------+------------+-------------------------+----------+------------+
+
+
++------------------------------------------------------------------------------------------+
+; th                                                                                       ;
++---------------+-------------+-----------+-----------+-------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From      ; To                      ; To Clock ;
++---------------+-------------+-----------+-----------+-------------------------+----------+
+; N/A           ; None        ; 0.700 ns  ; column[0] ; key_buff:M2|key_code[1] ; clk      ;
+; N/A           ; None        ; 0.700 ns  ; column[1] ; key_buff:M2|key_code[1] ; clk      ;
+; N/A           ; None        ; 0.700 ns  ; column[1] ; key_buff:M2|key_code[2] ; clk      ;
+; N/A           ; None        ; 0.700 ns  ; column[1] ; vaild:M3|gg[0]          ; clk      ;
+; N/A           ; None        ; -1.900 ns ; column[2] ; key_buff:M2|key_code[1] ; clk      ;
+; N/A           ; None        ; -3.300 ns ; column[2] ; key_buff:M2|key_code[3] ; clk      ;
+; N/A           ; None        ; -3.300 ns ; column[2] ; vaild:M3|gg[0]          ; clk      ;
+; N/A           ; None        ; -3.300 ns ; column[0] ; vaild:M3|gg[0]          ; clk      ;
+; N/A           ; None        ; -3.400 ns ; column[2] ; key_buff:M2|key_code[2] ; clk      ;
+; N/A           ; None        ; -3.400 ns ; column[0] ; key_buff:M2|key_code[2] ; clk      ;
+; N/A           ; None        ; -5.700 ns ; column[0] ; key_buff:M2|key_code[3] ; clk      ;
+; N/A           ; None        ; -5.700 ns ; column[1] ; key_buff:M2|key_code[3] ; clk      ;
++---------------+-------------+-----------+-----------+-------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Nov 12 11:02:44 2020
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off lab8 -c lab8
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13]" as buffer
+Info: Clock "clk" has Internal fmax of 42.37 MHz between source register "idx:M8|row[2]" and destination register "collision:M10|coll" (period= 23.6 ns)
+    Info: + Longest register to register delay is 21.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC8_E9; Fanout = 3; REG Node = 'idx:M8|row[2]'
+        Info: 2: + IC(1.800 ns) + CELL(1.300 ns) = 3.100 ns; Loc. = LC4_E3; Fanout = 1; COMB Node = 'mix:M9|Equal0~13'
+        Info: 3: + IC(0.000 ns) + CELL(2.300 ns) = 5.400 ns; Loc. = LC5_E3; Fanout = 8; COMB Node = 'mix:M9|Equal0~8'
+        Info: 4: + IC(0.200 ns) + CELL(2.200 ns) = 7.800 ns; Loc. = LC6_E3; Fanout = 2; COMB Node = 'mix:M9|red[4]~12'
+        Info: 5: + IC(0.200 ns) + CELL(2.200 ns) = 10.200 ns; Loc. = LC8_E3; Fanout = 1; COMB Node = 'collision:M10|Equal0~4'
+        Info: 6: + IC(1.600 ns) + CELL(1.400 ns) = 13.200 ns; Loc. = LC1_E2; Fanout = 1; COMB Node = 'collision:M10|Equal0~16'
+        Info: 7: + IC(0.000 ns) + CELL(2.300 ns) = 15.500 ns; Loc. = LC2_E2; Fanout = 1; COMB Node = 'collision:M10|Equal0~11'
+        Info: 8: + IC(1.600 ns) + CELL(2.200 ns) = 19.300 ns; Loc. = LC8_E1; Fanout = 1; COMB Node = 'collision:M10|coll~1'
+        Info: 9: + IC(0.200 ns) + CELL(2.000 ns) = 21.500 ns; Loc. = LC1_E1; Fanout = 28; REG Node = 'collision:M10|coll'
+        Info: Total cell delay = 15.900 ns ( 73.95 % )
+        Info: Total interconnect delay = 5.600 ns ( 26.05 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 9.600 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.400 ns) = 1.400 ns; Loc. = PIN_55; Fanout = 14; CLK Node = 'clk'
+            Info: 2: + IC(2.200 ns) + CELL(0.700 ns) = 4.300 ns; Loc. = LC1_B8; Fanout = 40; REG Node = 'freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13]'
+            Info: 3: + IC(5.300 ns) + CELL(0.000 ns) = 9.600 ns; Loc. = LC1_E1; Fanout = 28; REG Node = 'collision:M10|coll'
+            Info: Total cell delay = 2.100 ns ( 21.88 % )
+            Info: Total interconnect delay = 7.500 ns ( 78.13 % )
+        Info: - Longest clock path from clock "clk" to source register is 9.600 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.400 ns) = 1.400 ns; Loc. = PIN_55; Fanout = 14; CLK Node = 'clk'
+            Info: 2: + IC(2.200 ns) + CELL(0.700 ns) = 4.300 ns; Loc. = LC1_B8; Fanout = 40; REG Node = 'freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13]'
+            Info: 3: + IC(5.300 ns) + CELL(0.000 ns) = 9.600 ns; Loc. = LC8_E9; Fanout = 3; REG Node = 'idx:M8|row[2]'
+            Info: Total cell delay = 2.100 ns ( 21.88 % )
+            Info: Total interconnect delay = 7.500 ns ( 78.13 % )
+    Info: + Micro clock to output delay of source is 0.700 ns
+    Info: + Micro setup delay of destination is 1.400 ns
+Info: tsu for register "vaild:M3|gg[0]" (data pin = "column[0]", clock pin = "clk") is 8.900 ns
+    Info: + Longest pin to register delay is 17.100 ns
+        Info: 1: + IC(0.000 ns) + CELL(5.900 ns) = 5.900 ns; Loc. = PIN_44; Fanout = 3; PIN Node = 'column[0]'
+        Info: 2: + IC(3.300 ns) + CELL(2.200 ns) = 11.400 ns; Loc. = LC8_E35; Fanout = 1; COMB Node = 'key_buff:M2|key_code~8'
+        Info: 3: + IC(0.200 ns) + CELL(2.200 ns) = 13.800 ns; Loc. = LC2_E35; Fanout = 2; COMB Node = 'key_decode:M1|Mux1~1'
+        Info: 4: + IC(1.800 ns) + CELL(1.500 ns) = 17.100 ns; Loc. = LC8_E28; Fanout = 1; REG Node = 'vaild:M3|gg[0]'
+        Info: Total cell delay = 11.800 ns ( 69.01 % )
+        Info: Total interconnect delay = 5.300 ns ( 30.99 % )
+    Info: + Micro setup delay of destination is 1.400 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 9.600 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.400 ns) = 1.400 ns; Loc. = PIN_55; Fanout = 14; CLK Node = 'clk'
+        Info: 2: + IC(2.200 ns) + CELL(0.700 ns) = 4.300 ns; Loc. = LC1_B8; Fanout = 40; REG Node = 'freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13]'
+        Info: 3: + IC(5.300 ns) + CELL(0.000 ns) = 9.600 ns; Loc. = LC8_E28; Fanout = 1; REG Node = 'vaild:M3|gg[0]'
+        Info: Total cell delay = 2.100 ns ( 21.88 % )
+        Info: Total interconnect delay = 7.500 ns ( 78.13 % )
+Info: tco from clock "clk" to destination pin "red[5]" through register "idx:M8|row[2]" is 28.900 ns
+    Info: + Longest clock path from clock "clk" to source register is 9.600 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.400 ns) = 1.400 ns; Loc. = PIN_55; Fanout = 14; CLK Node = 'clk'
+        Info: 2: + IC(2.200 ns) + CELL(0.700 ns) = 4.300 ns; Loc. = LC1_B8; Fanout = 40; REG Node = 'freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13]'
+        Info: 3: + IC(5.300 ns) + CELL(0.000 ns) = 9.600 ns; Loc. = LC8_E9; Fanout = 3; REG Node = 'idx:M8|row[2]'
+        Info: Total cell delay = 2.100 ns ( 21.88 % )
+        Info: Total interconnect delay = 7.500 ns ( 78.13 % )
+    Info: + Micro clock to output delay of source is 0.700 ns
+    Info: + Longest register to pin delay is 18.600 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC8_E9; Fanout = 3; REG Node = 'idx:M8|row[2]'
+        Info: 2: + IC(1.800 ns) + CELL(1.300 ns) = 3.100 ns; Loc. = LC4_E3; Fanout = 1; COMB Node = 'mix:M9|Equal0~13'
+        Info: 3: + IC(0.000 ns) + CELL(2.300 ns) = 5.400 ns; Loc. = LC5_E3; Fanout = 8; COMB Node = 'mix:M9|Equal0~8'
+        Info: 4: + IC(1.600 ns) + CELL(2.200 ns) = 9.200 ns; Loc. = LC8_E2; Fanout = 2; COMB Node = 'mix:M9|red[5]~13'
+        Info: 5: + IC(3.100 ns) + CELL(6.300 ns) = 18.600 ns; Loc. = PIN_100; Fanout = 0; PIN Node = 'red[5]'
+        Info: Total cell delay = 12.100 ns ( 65.05 % )
+        Info: Total interconnect delay = 6.500 ns ( 34.95 % )
+Info: th for register "key_buff:M2|key_code[1]" (data pin = "column[0]", clock pin = "clk") is 0.700 ns
+    Info: + Longest clock path from clock "clk" to destination register is 9.600 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.400 ns) = 1.400 ns; Loc. = PIN_55; Fanout = 14; CLK Node = 'clk'
+        Info: 2: + IC(2.200 ns) + CELL(0.700 ns) = 4.300 ns; Loc. = LC1_B8; Fanout = 40; REG Node = 'freq_div:M6|lpm_counter:divider_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13]'
+        Info: 3: + IC(5.300 ns) + CELL(0.000 ns) = 9.600 ns; Loc. = LC1_E35; Fanout = 3; REG Node = 'key_buff:M2|key_code[1]'
+        Info: Total cell delay = 2.100 ns ( 21.88 % )
+        Info: Total interconnect delay = 7.500 ns ( 78.13 % )
+    Info: + Micro hold delay of destination is 1.700 ns
+    Info: - Shortest pin to register delay is 10.600 ns
+        Info: 1: + IC(0.000 ns) + CELL(5.900 ns) = 5.900 ns; Loc. = PIN_44; Fanout = 3; PIN Node = 'column[0]'
+        Info: 2: + IC(3.300 ns) + CELL(1.400 ns) = 10.600 ns; Loc. = LC1_E35; Fanout = 3; REG Node = 'key_buff:M2|key_code[1]'
+        Info: Total cell delay = 7.300 ns ( 68.87 % )
+        Info: Total interconnect delay = 3.300 ns ( 31.13 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 200 megabytes
+    Info: Processing ended: Thu Nov 12 11:02:44 2020
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
